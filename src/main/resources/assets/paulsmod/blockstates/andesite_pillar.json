@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "state=0": { "model": "paulsmod:block/andesite_pillar1" },
+    "state=1": { "model": "paulsmod:block/andesite_pillar2" },
+    "state=2": { "model": "paulsmod:block/andesite_pillar3" }  
+  }
+}

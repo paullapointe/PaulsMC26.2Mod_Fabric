@@ -1,0 +1,29 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:leaf_litter": 2
+    },
+    "minecraft:used": {
+      "minecraft:stone": 5,
+      "minecraft:lava_bucket": 1,
+      "minecraft:smoker": 1,
+      "paulsmod:wrench": 6,
+      "minecraft:furnace": 1,
+      "paulsmod:fueler": 13,
+      "paulsmod:lava_core": 1
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_furnace": 7,
+      "minecraft:time_since_rest": 4434,
+      "minecraft:interact_with_smoker": 3,
+      "minecraft:walk_one_cm": 5697,
+      "minecraft:total_world_time": 11854,
+      "minecraft:crouch_one_cm": 7,
+      "minecraft:sneak_time": 141,
+      "minecraft:play_time": 4434,
+      "minecraft:jump": 7,
+      "minecraft:time_since_death": 4434
+    }
+  },
+  "DataVersion": 4903
+}

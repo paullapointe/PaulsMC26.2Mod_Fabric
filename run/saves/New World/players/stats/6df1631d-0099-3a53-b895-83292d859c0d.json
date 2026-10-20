@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "minecraft:skeleton": 1
+    },
+    "minecraft:picked_up": {
+      "paulsmod:dwarven_ring": 1,
+      "minecraft:bone": 1
+    },
+    "minecraft:used": {
+      "minecraft:netherite_sword": 4,
+      "minecraft:skeleton_spawn_egg": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 295,
+      "minecraft:walk_one_cm": 329,
+      "minecraft:total_world_time": 403,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 1,
+      "minecraft:damage_taken": 80,
+      "minecraft:play_time": 295,
+      "minecraft:damage_dealt": 200,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 295
+    }
+  },
+  "DataVersion": 4903
+}

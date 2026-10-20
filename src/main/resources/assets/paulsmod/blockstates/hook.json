@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "paulsmod:block/hook"
+    },
+    "facing=south": {
+      "model": "paulsmod:block/hook",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "paulsmod:block/hook",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "paulsmod:block/hook",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:bookshelf": 38,
+      "minecraft:enchanting_table": 4
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 5249,
+      "minecraft:walk_one_cm": 4065,
+      "minecraft:total_world_time": 5268,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 5249,
+      "minecraft:jump": 3,
+      "minecraft:enchant_item": 22,
+      "minecraft:time_since_death": 5249
+    }
+  },
+  "DataVersion": 4903
+}

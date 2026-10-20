@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "ingredients": [
+    "paulsmod:traveling_stone",
+    "minecraft:arrow"
+  ],
+  "result": {
+    "id": "paulsmod:teleporter_arrow"
+  }
+}

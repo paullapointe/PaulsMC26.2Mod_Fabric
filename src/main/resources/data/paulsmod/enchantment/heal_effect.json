@@ -1,0 +1,42 @@
+{
+  "description": {
+    "translate": "enchantment.paulsmod.heal_effect"
+  },
+  "supported_items": [
+    "paulsmod:staff",
+    "paulsmod:diamond_staff",
+    "paulsmod:emerald_staff",
+    "paulsmod:am_staff",
+    "paulsmod:end_staff"
+  ],
+  "weight": 10,
+  "max_level": 3,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "paulsmod:heal_effect",
+          "amount": {
+            "type": "minecraft:linear",
+            "base": 1.0,
+            "per_level_above_first": 1.0
+          }
+        }
+      }
+    ]
+  }
+}

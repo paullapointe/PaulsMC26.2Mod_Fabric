@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:oak_planks",
+    "minecraft:quartz"
+  ],
+  "result": {
+    "id": "paulsmod:clock"
+  }
+}

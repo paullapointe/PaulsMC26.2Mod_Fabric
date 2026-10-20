@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "blocks",
+  "ingredients": [
+    "paulsmod:pillar1"
+  ],
+  "result": {
+    "id": "paulsmod:pillar2"
+  }
+}

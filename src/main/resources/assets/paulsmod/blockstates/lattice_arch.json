@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "paulsmod:block/lattice_arch"
+    },
+    "facing=south": {
+      "model": "paulsmod:block/lattice_arch",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "paulsmod:block/lattice_arch",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "paulsmod:block/lattice_arch",
+      "y": 90
+    }
+  }
+}

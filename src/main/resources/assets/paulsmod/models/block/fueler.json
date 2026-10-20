@@ -1,0 +1,99 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "paulsmod:block/fueler",
+		"particle": "paulsmod:block/fueler"
+	},
+	"elements": [
+		{
+			"name": "one",
+			"from": [2, 1, 0],
+			"to": [14, 13, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, -1, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 6], "texture": "#0"},
+				"east": {"uv": [7, 10, 8, 16], "texture": "#0"},
+				"south": {"uv": [0, 6, 6, 12], "texture": "#0"},
+				"west": {"uv": [6, 10, 7, 16], "texture": "#0"},
+				"up": {"uv": [9, 16, 8, 10], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [10, 10, 9, 16], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "two",
+			"from": [3, 2, 2],
+			"to": [13, 12, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [27, 0, 2]},
+			"faces": {
+				"north": {"uv": [6, 5, 11, 10], "texture": "#0"},
+				"east": {"uv": [10, 10, 11, 15], "texture": "#0"},
+				"south": {"uv": [6, 0, 11, 5], "texture": "#0"},
+				"west": {"uv": [11, 0, 12, 5], "texture": "#0"},
+				"up": {"uv": [12, 10, 11, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 10, 11, 15], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [47, 19, 0],
+			"translation": [0, 0, 0.5],
+			"scale": [0.275, 0.275, 0.275]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [47, 19, 0],
+			"translation": [0, 0, 0.5],
+			"scale": [0.275, 0.275, 0.275]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 1.25, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 1.25, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"gui": {
+			"rotation": [25, -145, 0],
+			"translation": [0, 2.25, 0],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"head": {
+			"translation": [0, 7, 0]
+		},
+		"fixed": {
+			"rotation": [-17, 52, 0],
+			"translation": [0, 2.25, -3.75],
+			"scale": [0.55, 0.55, 0.55]
+		}
+	},
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [
+				{
+					"name": "table",
+					"origin": [11.5, 2.5, 5],
+					"scope": 0,
+					"color": 0,
+					"children": [0, 1]
+				},
+				{
+					"name": "tray",
+					"origin": [8, 8, 8],
+					"scope": 0,
+					"color": 0,
+					"children": []
+				}
+			]
+		}
+	]
+}

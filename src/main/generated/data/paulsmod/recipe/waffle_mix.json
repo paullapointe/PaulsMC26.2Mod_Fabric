@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    "paulsmod:flour",
+    "paulsmod:flour",
+    "minecraft:egg"
+  ],
+  "result": {
+    "count": 2,
+    "id": "paulsmod:waffle_mix"
+  }
+}

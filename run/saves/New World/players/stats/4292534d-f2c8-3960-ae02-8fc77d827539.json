@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2289,
+      "minecraft:walk_one_cm": 7911,
+      "minecraft:total_world_time": 2314,
+      "minecraft:leave_game": 1,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:walk_on_water_one_cm": 221,
+      "minecraft:sneak_time": 258,
+      "minecraft:play_time": 2289,
+      "minecraft:jump": 4,
+      "minecraft:time_since_death": 2289
+    }
+  },
+  "DataVersion": 4903
+}

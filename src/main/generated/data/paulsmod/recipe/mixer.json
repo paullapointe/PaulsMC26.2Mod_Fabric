@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:furnace",
+    "minecraft:bucket"
+  ],
+  "result": {
+    "id": "paulsmod:mixer"
+  }
+}

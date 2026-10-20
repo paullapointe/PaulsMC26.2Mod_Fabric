@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "paulsmod:staff": 4
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 956,
+      "minecraft:walk_one_cm": 2442,
+      "minecraft:total_world_time": 996,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 956,
+      "minecraft:jump": 4,
+      "minecraft:time_since_death": 956
+    }
+  },
+  "DataVersion": 4903
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_big_ds_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "paulsmod:big_ds_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "paulsmod:deepslate_pillar1"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_big_ds_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "paulsmod:deepslate_pillar1"
+    ]
+  }
+}

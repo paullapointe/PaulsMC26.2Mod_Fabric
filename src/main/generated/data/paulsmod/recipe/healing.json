@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:polished_diorite",
+    "minecraft:lapis_lazuli",
+    "minecraft:golden_apple"
+  ],
+  "result": {
+    "id": "paulsmod:healing"
+  }
+}

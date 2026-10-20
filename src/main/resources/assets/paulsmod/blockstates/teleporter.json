@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "paulsmod:block/teleporter" },
+    "powered=true": { "model": "paulsmod:block/teleporter_on" }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:polished_diorite",
+    "minecraft:emerald"
+  ],
+  "result": {
+    "id": "paulsmod:statue"
+  }
+}

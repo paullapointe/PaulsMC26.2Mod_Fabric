@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "potions",
+  "ingredients": [
+    "minecraft:iron_nugget"
+  ],
+  "result": {
+    "count": 2,
+    "id": "paulsmod:iron_powder"
+  }
+}

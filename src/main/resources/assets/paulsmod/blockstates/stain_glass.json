@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "state=0": { "model": "paulsmod:block/stain_glass1" },
+    "state=1": { "model": "paulsmod:block/stain_glass2" },
+    "state=2": { "model": "paulsmod:block/stain_glass3" },
+    "state=3": { "model": "paulsmod:block/stain_glass4" },
+    "state=4": { "model": "paulsmod:block/stain_glass5" },
+    "state=5": { "model": "paulsmod:block/stain_glass6" },
+    "state=6": { "model": "paulsmod:block/stain_glass7" },
+    "state=7": { "model": "paulsmod:block/stain_glass8" },
+    "state=8": { "model": "paulsmod:block/stain_glass9" },  
+    "state=9": { "model": "paulsmod:block/stain_glass10" },
+    "state=10": { "model": "paulsmod:block/stain_glass11" },
+    "state=11": { "model": "paulsmod:block/stain_glass12" },
+    "state=12": { "model": "paulsmod:block/stain_glass13" },
+    "state=13": { "model": "paulsmod:block/stain_glass14" },
+    "state=14": { "model": "paulsmod:block/stain_glass15" },
+    "state=15": { "model": "paulsmod:block/stain_glass16" },
+    "state=16": { "model": "paulsmod:block/stain_glass17" },
+    "state=17": { "model": "paulsmod:block/stain_glass18" }
+   
+  }
+}

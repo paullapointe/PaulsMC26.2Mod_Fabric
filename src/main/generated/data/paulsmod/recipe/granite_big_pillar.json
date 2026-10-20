@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "blocks",
+  "ingredients": [
+    "minecraft:polished_granite"
+  ],
+  "result": {
+    "id": "paulsmod:granite_big_pillar"
+  }
+}

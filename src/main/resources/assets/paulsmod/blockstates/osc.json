@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "paulsmod:block/osc" },
+    "powered=true": { "model": "paulsmod:block/osc_on" }
+  }
+}

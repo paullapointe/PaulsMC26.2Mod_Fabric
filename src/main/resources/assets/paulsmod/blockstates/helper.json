@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "paulsmod:block/helper" },
+    "powered=true": { "model": "paulsmod:block/helper_on" }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "paulsmod:block/white_brick_top",
+    "side": "paulsmod:block/census2"
+  }
+}

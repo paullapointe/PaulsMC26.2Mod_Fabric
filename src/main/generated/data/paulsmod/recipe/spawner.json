@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:waxed_copper_grate",
+    "paulsmod:osc",
+    "minecraft:lapis_block"
+  ],
+  "result": {
+    "id": "paulsmod:spawner"
+  }
+}

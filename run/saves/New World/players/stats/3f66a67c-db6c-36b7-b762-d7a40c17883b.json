@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:crafted": {
+      "paulsmod:waffles": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1260,
+      "minecraft:interact_with_smoker": 1,
+      "minecraft:walk_one_cm": 1012,
+      "minecraft:total_world_time": 3279,
+      "minecraft:play_time": 1260,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 1260
+    }
+  },
+  "DataVersion": 4903
+}

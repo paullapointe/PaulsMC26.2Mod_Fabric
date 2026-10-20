@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "paulsmod:block/granite_big_pillar"
+    },
+    "facing=south": {
+      "model": "paulsmod:block/granite_big_pillar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "paulsmod:block/granite_big_pillar",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "paulsmod:block/granite_big_pillar",
+      "y": 90
+    }
+  }
+}

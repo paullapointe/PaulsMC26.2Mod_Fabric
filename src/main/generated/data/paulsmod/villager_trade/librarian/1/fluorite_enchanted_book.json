@@ -1,0 +1,45 @@
+{
+  "given_item_modifiers": [
+    {
+      "function": "minecraft:enchant_randomly",
+      "include_additional_cost_component": true,
+      "only_compatible": false,
+      "options": [
+        "paulsmod:lightening",
+        "paulsmod:arise",
+        "paulsmod:bread",
+        "paulsmod:bury",
+        "paulsmod:dawn",
+        "paulsmod:freeze",
+        "paulsmod:heal",
+        "paulsmod:noflame",
+        "paulsmod:torch",
+        "paulsmod:enflame"
+      ]
+    },
+    {
+      "function": "minecraft:filtered",
+      "item_filter": {
+        "items": "minecraft:enchanted_book",
+        "predicates": {
+          "minecraft:stored_enchantments": [
+            {}
+          ]
+        }
+      },
+      "on_fail": {
+        "function": "minecraft:discard"
+      }
+    }
+  ],
+  "gives": {
+    "id": "minecraft:enchanted_book"
+  },
+  "max_uses": 12.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 32.0,
+    "id": "paulsmod:florin"
+  },
+  "xp": 6.0
+}

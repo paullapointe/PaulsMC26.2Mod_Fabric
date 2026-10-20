@@ -1,0 +1,32 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:waxed_copper_grate": 1,
+      "minecraft:copper_grate": 1
+    },
+    "minecraft:crafted": {
+      "paulsmod:spawner": 1
+    },
+    "minecraft:used": {
+      "minecraft:crafting_table": 1,
+      "minecraft:honeycomb": 2,
+      "minecraft:netherite_pickaxe": 2,
+      "minecraft:copper_grate": 3
+    },
+    "minecraft:mined": {
+      "minecraft:waxed_copper_grate": 1,
+      "minecraft:copper_grate": 1
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_crafting_table": 3,
+      "minecraft:time_since_rest": 5251,
+      "minecraft:walk_one_cm": 3655,
+      "minecraft:total_world_time": 5639,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 5251,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 5251
+    }
+  },
+  "DataVersion": 4903
+}

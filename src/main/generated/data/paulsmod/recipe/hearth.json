@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:bricks",
+    "minecraft:campfire"
+  ],
+  "result": {
+    "id": "paulsmod:hearth"
+  }
+}

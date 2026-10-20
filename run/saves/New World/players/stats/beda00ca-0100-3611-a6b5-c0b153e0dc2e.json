@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:talked_to_villager": 2,
+      "minecraft:time_since_rest": 2572,
+      "minecraft:walk_one_cm": 3403,
+      "minecraft:total_world_time": 4614,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:sneak_time": 19,
+      "minecraft:play_time": 2572,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 2572
+    },
+    "minecraft:used": {
+      "minecraft:anvil": 1,
+      "paulsmod:staff": 2
+    }
+  },
+  "DataVersion": 4903
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:oak_door",
+    "minecraft:gold_ingot"
+  ],
+  "result": {
+    "id": "paulsmod:locking_door"
+  }
+}

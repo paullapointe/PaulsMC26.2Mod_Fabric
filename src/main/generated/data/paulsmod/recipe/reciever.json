@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:lightning_rod",
+    "paulsmod:osc"
+  ],
+  "result": {
+    "id": "paulsmod:reciever"
+  }
+}

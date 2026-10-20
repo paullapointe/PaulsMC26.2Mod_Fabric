@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "ingredients": [
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:compass"
+  ],
+  "result": {
+    "id": "paulsmod:guide_stone"
+  }
+}

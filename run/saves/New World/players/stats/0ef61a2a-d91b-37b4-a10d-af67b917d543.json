@@ -1,0 +1,18 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "paulsmod:wrench": 6,
+      "paulsmod:big_ds_pillar": 4
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 745,
+      "minecraft:walk_one_cm": 4420,
+      "minecraft:total_world_time": 760,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 745,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 745
+    }
+  },
+  "DataVersion": 4903
+}

@@ -1,0 +1,40 @@
+{
+  "description": {
+    "translate": "enchantment.paulsmod.dawn_effect"
+  },
+  "supported_items": [
+    "paulsmod:emerald_staff",
+    "paulsmod:am_staff",
+    "paulsmod:end_staff"
+  ],
+  "weight": 10,
+  "max_level": 1,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "paulsmod:dawn_effect",
+          "amount": {
+            "type": "minecraft:linear",
+            "base": 1.0,
+            "per_level_above_first": 1.0
+          }
+        }
+      }
+    ]
+  }
+}

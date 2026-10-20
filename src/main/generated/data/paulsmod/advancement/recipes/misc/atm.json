@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_florin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "paulsmod:florin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "paulsmod:atm"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_florin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "paulsmod:atm"
+    ]
+  }
+}

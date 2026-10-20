@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "ingredients": [
+    "minecraft:ender_pearl",
+    "minecraft:diamond",
+    "minecraft:gold_ingot"
+  ],
+  "result": {
+    "id": "paulsmod:traveling_stone"
+  }
+}

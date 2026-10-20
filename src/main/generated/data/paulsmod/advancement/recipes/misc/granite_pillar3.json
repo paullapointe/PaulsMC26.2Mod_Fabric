@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_granite_pillar2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "paulsmod:granite_pillar2"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "paulsmod:granite_pillar3"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_granite_pillar2"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "paulsmod:granite_pillar3"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1267,
+      "minecraft:walk_one_cm": 1338,
+      "minecraft:total_world_time": 1293,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 1267,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 1267
+    },
+    "minecraft:used": {
+      "paulsmod:locking_door": 2
+    }
+  },
+  "DataVersion": 4903
+}

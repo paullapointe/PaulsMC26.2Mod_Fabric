@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "ingredients": [
+    "minecraft:paper",
+    "paulsmod:glue"
+  ],
+  "result": {
+    "id": "paulsmod:stickynote"
+  }
+}

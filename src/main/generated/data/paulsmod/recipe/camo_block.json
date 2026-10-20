@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:sculk",
+    "minecraft:lapis_lazuli",
+    "minecraft:glass"
+  ],
+  "result": {
+    "id": "paulsmod:camo_block"
+  }
+}

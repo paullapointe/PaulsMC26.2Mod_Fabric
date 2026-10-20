@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:redstone",
+    "minecraft:quartz",
+    "minecraft:copper_ingot"
+  ],
+  "result": {
+    "id": "paulsmod:osc"
+  }
+}

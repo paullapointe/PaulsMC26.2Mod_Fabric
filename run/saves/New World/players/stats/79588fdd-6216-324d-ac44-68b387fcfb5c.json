@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1421,
+      "minecraft:walk_one_cm": 10214,
+      "minecraft:total_world_time": 1547,
+      "minecraft:leave_game": 1,
+      "minecraft:sneak_time": 33,
+      "minecraft:play_time": 1421,
+      "minecraft:jump": 4,
+      "minecraft:time_since_death": 1421
+    },
+    "minecraft:used": {
+      "paulsmod:staff": 4
+    },
+    "minecraft:picked_up": {
+      "minecraft:leather": 1,
+      "minecraft:arrow": 3
+    }
+  },
+  "DataVersion": 4903
+}

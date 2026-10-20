@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:blasting",
+  "experience": 0.7,
+  "ingredient": "paulsmod:clay_plate",
+  "result": {
+    "id": "paulsmod:plate"
+  }
+}

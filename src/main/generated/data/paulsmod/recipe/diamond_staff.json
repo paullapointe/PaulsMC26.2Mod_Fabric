@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "potions",
+  "ingredients": [
+    "paulsmod:staff",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "id": "paulsmod:diamond_staff"
+  }
+}

@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "paulsmod",
+	"version": "${version}",
+	"name": "Pauls Mod",
+	"description": "",
+	"authors": [
+		"Paul LaPointe"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "MIT-License",
+	"icon": "assets/paulsmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.lapointep.paulsmod.PaulsMod"
+		],
+		"client": [
+		  "net.lapointep.paulsmod.PaulsModClient"
+		],
+		"fabric-datagen": [
+			"net.lapointep.paulsmod.PaulsModDataGenerator"
+		]
+	},
+	"mixins": [
+		"paulsmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

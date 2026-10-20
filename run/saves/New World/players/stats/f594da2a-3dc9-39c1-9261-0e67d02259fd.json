@@ -1,0 +1,18 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "paulsmod:mixer": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 788,
+      "minecraft:walk_one_cm": 5,
+      "minecraft:total_world_time": 788,
+      "minecraft:fly_one_cm": 1003,
+      "minecraft:crouch_one_cm": 6,
+      "minecraft:sneak_time": 20,
+      "minecraft:play_time": 788,
+      "minecraft:time_since_death": 788
+    }
+  },
+  "DataVersion": 4903
+}

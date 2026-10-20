@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "paulsmod:block/stickynote"
+    },
+    "facing=south": {
+      "model": "paulsmod:block/stickynote",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "paulsmod:block/stickynote",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "paulsmod:block/stickynote",
+      "y": 90
+    }
+  }
+}

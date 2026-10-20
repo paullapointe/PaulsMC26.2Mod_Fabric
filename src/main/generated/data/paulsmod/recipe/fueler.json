@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "paulsmod:reciever",
+    "minecraft:chest"
+  ],
+  "result": {
+    "id": "paulsmod:fueler"
+  }
+}

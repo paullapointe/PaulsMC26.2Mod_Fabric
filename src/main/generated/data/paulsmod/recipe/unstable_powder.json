@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "potions",
+  "ingredients": [
+    "paulsmod:copper_powder",
+    "paulsmod:iron_powder",
+    "minecraft:redstone"
+  ],
+  "result": {
+    "count": 3,
+    "id": "paulsmod:unstable_powder"
+  }
+}

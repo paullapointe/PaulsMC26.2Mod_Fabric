@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "paulsmod:pedestal",
+    "minecraft:gold_ingot"
+  ],
+  "result": {
+    "id": "paulsmod:alter"
+  }
+}

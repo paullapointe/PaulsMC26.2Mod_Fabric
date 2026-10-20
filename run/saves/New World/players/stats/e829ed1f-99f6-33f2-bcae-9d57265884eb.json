@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:interact_with_furnace": 1,
+      "minecraft:time_since_rest": 727,
+      "minecraft:interact_with_smoker": 1,
+      "minecraft:walk_one_cm": 129,
+      "minecraft:total_world_time": 745,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 727,
+      "minecraft:time_since_death": 727
+    },
+    "minecraft:crafted": {
+      "minecraft:iron_ingot": 34,
+      "paulsmod:waffles": 1
+    },
+    "minecraft:used": {
+      "paulsmod:barrier": 1
+    }
+  },
+  "DataVersion": 4903
+}

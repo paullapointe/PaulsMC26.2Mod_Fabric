@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "ingredients": [
+    "minecraft:white_wool",
+    "minecraft:white_wool",
+    "paulsmod:glue"
+  ],
+  "result": {
+    "id": "paulsmod:bandage"
+  }
+}

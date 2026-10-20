@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "paulsmod:plate"
+  ],
+  "result": {
+    "id": "paulsmod:hook"
+  }
+}

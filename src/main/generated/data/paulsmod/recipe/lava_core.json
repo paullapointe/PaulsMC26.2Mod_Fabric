@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "paulsmod:mixer",
+    "minecraft:obsidian"
+  ],
+  "result": {
+    "id": "paulsmod:lava_core"
+  }
+}

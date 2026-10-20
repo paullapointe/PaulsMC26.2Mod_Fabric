@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "paulsmod:block/big_ds_pillar"
+    },
+    "facing=south": {
+      "model": "paulsmod:block/big_ds_pillar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "paulsmod:block/big_ds_pillar",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "paulsmod:block/big_ds_pillar",
+      "y": 90
+    }
+  }
+}

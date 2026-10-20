@@ -1,0 +1,30 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:netherite_sword": 10,
+      "paulsmod:staff": 3,
+      "paulsmod:wrench": 4,
+      "paulsmod:fueler": 9
+    },
+    "minecraft:killed": {
+      "minecraft:enderman": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 4324,
+      "minecraft:walk_one_cm": 10852,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 1,
+      "minecraft:play_time": 4324,
+      "minecraft:damage_dealt": 398,
+      "minecraft:jump": 12,
+      "minecraft:time_since_death": 4324,
+      "minecraft:interact_with_furnace": 3,
+      "minecraft:open_chest": 1,
+      "minecraft:total_world_time": 7819,
+      "minecraft:fly_one_cm": 3382,
+      "minecraft:crouch_one_cm": 43,
+      "minecraft:sneak_time": 260
+    }
+  },
+  "DataVersion": 4903
+}

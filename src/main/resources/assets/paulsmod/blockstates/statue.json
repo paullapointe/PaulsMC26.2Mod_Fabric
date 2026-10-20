@@ -1,0 +1,32 @@
+{
+  "variants": {
+    "facing=north,state=0": { "model": "paulsmod:block/statue1" },
+    "facing=east,state=0":  { "model": "paulsmod:block/statue1", "y": 90 },
+    "facing=south,state=0": { "model": "paulsmod:block/statue1", "y": 180 },
+    "facing=west,state=0":  { "model": "paulsmod:block/statue1", "y": 270 },
+    "facing=north,state=1": { "model": "paulsmod:block/statue2" },
+    "facing=east,state=1":  { "model": "paulsmod:block/statue2", "y": 90 },
+    "facing=south,state=1": { "model": "paulsmod:block/statue2", "y": 180 },
+    "facing=west,state=1":  { "model": "paulsmod:block/statue2", "y": 270 },
+    "facing=north,state=2": { "model": "paulsmod:block/statue3" },
+    "facing=east,state=2":  { "model": "paulsmod:block/statue3", "y": 90 },
+    "facing=south,state=2": { "model": "paulsmod:block/statue3", "y": 180 },
+    "facing=west,state=2":  { "model": "paulsmod:block/statue3", "y": 270 },
+    "facing=north,state=3": { "model": "paulsmod:block/statue4" },
+    "facing=east,state=3":  { "model": "paulsmod:block/statue4", "y": 90 },
+    "facing=south,state=3": { "model": "paulsmod:block/statue4", "y": 180 },
+    "facing=west,state=3":  { "model": "paulsmod:block/statue4", "y": 270 },
+    "facing=north,state=4": { "model": "paulsmod:block/statue5" },
+    "facing=east,state=4":  { "model": "paulsmod:block/statue5", "y": 90 },
+    "facing=south,state=4": { "model": "paulsmod:block/statue5", "y": 180 },
+    "facing=west,state=4":  { "model": "paulsmod:block/statue5", "y": 270 },
+    "facing=north,state=5": { "model": "paulsmod:block/statue6" },
+    "facing=east,state=5":  { "model": "paulsmod:block/statue6", "y": 90 },
+    "facing=south,state=5": { "model": "paulsmod:block/statue6", "y": 180 },
+    "facing=west,state=5":  { "model": "paulsmod:block/statue6", "y": 270 },
+    "facing=north,state=6": { "model": "paulsmod:block/statue7" },
+    "facing=east,state=6":  { "model": "paulsmod:block/statue7", "y": 90 },
+    "facing=south,state=6": { "model": "paulsmod:block/statue7", "y": 180 },
+    "facing=west,state=6":  { "model": "paulsmod:block/statue7", "y": 270 }
+  }
+}

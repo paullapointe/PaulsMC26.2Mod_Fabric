@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "state=0": { "model": "paulsmod:block/unstablestone0" },
+    "state=1": { "model": "paulsmod:block/unstablestone1" },
+    "state=2": { "model": "paulsmod:block/unstablestone2" },
+    "state=3": { "model": "paulsmod:block/unstablestone3" },
+    "state=4": { "model": "paulsmod:block/unstablestone4" }
+  }
+}

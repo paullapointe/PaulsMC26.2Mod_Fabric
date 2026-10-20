@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:interact_with_crafting_table": 3,
+      "minecraft:time_since_rest": 1085,
+      "minecraft:walk_one_cm": 995,
+      "minecraft:total_world_time": 1103,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 1085,
+      "minecraft:jump": 3,
+      "minecraft:time_since_death": 1085
+    },
+    "minecraft:used": {
+      "paulsmod:deepslate_pillar3": 1,
+      "paulsmod:deepslate_pillar1": 1,
+      "minecraft:crafting_table": 1,
+      "paulsmod:deepslate_pillar2": 1
+    },
+    "minecraft:crafted": {
+      "paulsmod:deepslate_pillar3": 1,
+      "paulsmod:deepslate_pillar2": 1,
+      "paulsmod:deepslate_pillar1": 1
+    }
+  },
+  "DataVersion": 4903
+}

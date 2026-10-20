@@ -1,0 +1,23 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:bread": 2
+    },
+    "minecraft:used": {
+      "paulsmod:staff": 4
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2983,
+      "minecraft:fall_one_cm": 500,
+      "minecraft:walk_one_cm": 1795,
+      "minecraft:total_world_time": 3001,
+      "minecraft:leave_game": 1,
+      "minecraft:interact_with_anvil": 5,
+      "minecraft:damage_taken": 20,
+      "minecraft:play_time": 2983,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 2983
+    }
+  },
+  "DataVersion": 4903
+}

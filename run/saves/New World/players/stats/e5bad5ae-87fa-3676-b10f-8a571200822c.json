@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:flint_and_steel": 1,
+      "paulsmod:staff": 9
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 835,
+      "minecraft:walk_one_cm": 82,
+      "minecraft:total_world_time": 1195,
+      "minecraft:sneak_time": 90,
+      "minecraft:play_time": 835,
+      "minecraft:time_since_death": 835
+    }
+  },
+  "DataVersion": 4903
+}

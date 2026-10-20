@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pillar1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "paulsmod:pillar1"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "paulsmod:pillar2"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pillar1"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "paulsmod:pillar2"
+    ]
+  }
+}

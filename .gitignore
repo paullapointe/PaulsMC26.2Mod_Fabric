@@ -1,41 +1,90 @@
-!Build/
-.last_cover_stats
-/META.yml
-/META.json
-/MYMETA.*
-*.o
-*.pm.tdy
-*.bs
+CloneBlock.pl
+CloneItem.sh
+deploy.sh
 
-# Devel::Cover
-cover_db/
+# =========================================================================
+# Java Core & Compiled Artifacts
+# =========================================================================
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
 
-# Devel::NYTProf
-nytprof.out
+# Package Files (Uncomment if you want to block library archives)
+# *.jar
+# *.war
+# *.nar
+# *.ear
+# *.zip
 
-# Dist::Zilla
-/.build/
+# Virtual Machine crash logs
+hs_err_pid*
+replay_pid*
 
-# Module::Build
-_build/
-Build
-Build.bat
+# =========================================================================
+# Build Tools (Maven & Gradle)
+# =========================================================================
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
-# Module::Install
-inc/
+# Gradle
+.gradle/
+build/
+.gradletasknamecache
+gradle-app.setting
+# Ensure Gradle Wrapper jar itself is NOT ignored if you use it
+!gradle-wrapper.jar
 
-# ExtUtils::MakeMaker
-/blib/
-/_eumm/
-/*.gz
-/Makefile
-/Makefile.old
-/MANIFEST.bak
-/pm_to_blib
-/*.zip
+# =========================================================================
+# IDEs & Editors
+# =========================================================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
 
-# Carton/Carmel
-/local/
-/.carmel/
-# cpanfile.snapshot should generally be ignored for library code, otherwise included
-# cpanfile.snapshot
+# Eclipse
+.metadata/
+bin/
+tmp/
+.settings/
+.classpath
+.project
+.factorypath
+.loadpath
+*.tmp
+*.bak
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# =========================================================================
+# Operating Systems (Global Overrides)
+# =========================================================================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini

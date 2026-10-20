@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:splash_potion": 3
+    },
+    "minecraft:crafted": {
+      "paulsmod:dirt_powder": 2
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_brewingstand": 2,
+      "minecraft:interact_with_crafting_table": 1,
+      "minecraft:time_since_rest": 4739,
+      "minecraft:walk_one_cm": 1566,
+      "minecraft:total_world_time": 9539,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 840,
+      "minecraft:sneak_time": 12,
+      "minecraft:play_time": 4739,
+      "minecraft:jump": 5,
+      "minecraft:time_since_death": 4739
+    },
+    "minecraft:picked_up": {
+      "minecraft:leaf_litter": 11
+    }
+  },
+  "DataVersion": 4903
+}

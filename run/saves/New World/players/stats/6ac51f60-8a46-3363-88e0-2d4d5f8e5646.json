@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:bread": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2009,
+      "minecraft:fall_one_cm": 225,
+      "minecraft:walk_one_cm": 6004,
+      "minecraft:total_world_time": 2038,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 90,
+      "minecraft:damage_taken": 205,
+      "minecraft:play_time": 2009,
+      "minecraft:damage_dealt": 108,
+      "minecraft:jump": 13,
+      "minecraft:time_since_death": 2009
+    },
+    "minecraft:mined": {
+      "minecraft:grass_block": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:bread": 16
+    }
+  },
+  "DataVersion": 4903
+}

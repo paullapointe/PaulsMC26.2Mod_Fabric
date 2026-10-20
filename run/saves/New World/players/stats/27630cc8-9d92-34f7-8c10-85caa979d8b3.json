@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:lava_bucket": 1,
+      "minecraft:flint_and_steel": 2,
+      "paulsmod:staff": 24
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2902,
+      "minecraft:walk_one_cm": 3735,
+      "minecraft:total_world_time": 3102,
+      "minecraft:leave_game": 1,
+      "minecraft:interact_with_anvil": 2,
+      "minecraft:sneak_time": 224,
+      "minecraft:play_time": 2902,
+      "minecraft:jump": 5,
+      "minecraft:time_since_death": 2902
+    }
+  },
+  "DataVersion": 4903
+}

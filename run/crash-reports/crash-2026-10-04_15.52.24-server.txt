@@ -1,0 +1,188 @@
+---- Minecraft Crash Report ----
+// Oh - I know what I did wrong!
+
+Time: 2026-10-04 15:52:24
+Description: Ticking block entity
+
+java.lang.IllegalArgumentException: Cannot set property IntegerProperty{name=state, clazz=class java.lang.Integer, values=[0, 1]} as it does not exist in Block{paulsmod:seeing_pool}
+	at knot//net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:122)
+	at knot//net.lapointep.paulsmod.block.entity.SeeingPoolBlockEntity.setState(SeeingPoolBlockEntity.java:147)
+	at knot//net.lapointep.paulsmod.block.entity.SeeingPoolBlockEntity.tick(SeeingPoolBlockEntity.java:51)
+	at knot//net.lapointep.paulsmod.block.entity.SeeingPoolBlockEntity.tick(SeeingPoolBlockEntity.java:44)
+	at knot//net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:770)
+	at knot//net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:824)
+	at knot//net.minecraft.world.level.Level.tickBlockEntities(Level.java:484)
+	at knot//net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:452)
+	at knot//net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1137)
+	at knot//net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1001)
+	at knot//net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:139)
+	at knot//net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1034)
+	at knot//net.minecraft.client.server.IntegratedServer.processPacketsAndTick(IntegratedServer.java:107)
+	at knot//net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:773)
+	at knot//net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:320)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at knot//net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:122)
+	at knot//net.lapointep.paulsmod.block.entity.SeeingPoolBlockEntity.setState(SeeingPoolBlockEntity.java:147)
+	at knot//net.lapointep.paulsmod.block.entity.SeeingPoolBlockEntity.tick(SeeingPoolBlockEntity.java:51)
+	at knot//net.lapointep.paulsmod.block.entity.SeeingPoolBlockEntity.tick(SeeingPoolBlockEntity.java:44)
+	at knot//net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:770)
+	at knot//net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:824)
+	at knot//net.minecraft.world.level.Level.tickBlockEntities(Level.java:484)
+
+-- Block entity being ticked --
+Details:
+	Name: paulsmod:seeing_pool // net.lapointep.paulsmod.block.entity.SeeingPoolBlockEntity
+	Cached block: Block{paulsmod:seeing_pool}[state=0]
+	Actual block: Block{paulsmod:seeing_pool}[state=0]
+	Block location: World: (125,64,-19), Section: (at 13,0,13 in 7,4,-2; chunk contains blocks 112,-64,-32 to 127,319,-17), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+Stacktrace:
+	at knot//net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:770)
+	at knot//net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:824)
+	at knot//net.minecraft.world.level.Level.tickBlockEntities(Level.java:484)
+	at knot//net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:452)
+	at knot//net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1137)
+	at knot//net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1001)
+	at knot//net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:139)
+	at knot//net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1034)
+	at knot//net.minecraft.client.server.IntegratedServer.processPacketsAndTick(IntegratedServer.java:107)
+	at knot//net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:773)
+	at knot//net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:320)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+
+-- Affected level --
+Details:
+	All players: 1 total; ServerPlayer{name=Player29, id=103, pos=(126.75522659718833, 63.0, -17.342161378437314), mode=CREATIVE, permission=owner}
+	Chunk stats: 3481
+	Level dimension: minecraft:overworld
+	Level time: 400691 game time, 769753 day time
+	Level spawn location: World: (0,93,0), Section: (at 0,13,0 in 0,5,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Commands: true
+	Known server brands: fabric
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Loaded entity count: 493
+	Server weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+Stacktrace:
+	at knot//net.minecraft.server.level.ServerLevel.fillReportDetails(ServerLevel.java:1872)
+	at knot//net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1140)
+	at knot//net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1001)
+	at knot//net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:139)
+	at knot//net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1034)
+	at knot//net.minecraft.client.server.IntegratedServer.processPacketsAndTick(IntegratedServer.java:107)
+	at knot//net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:773)
+	at knot//net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:320)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+
+-- System Details --
+Details:
+	Minecraft Version: 26.2
+	Minecraft Version ID: 26.2
+	Operating System: Linux (amd64) version 5.15.0-198-generic
+	Java Version: 26.0.2.1, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 2681787800 bytes (2557 MiB) / 3397386240 bytes (3240 MiB) up to 12599689216 bytes (12016 MiB)
+	Memory (heap): init: 008MiB, used: 666MiB, committed: 3240MiB, max: 12016MiB
+	Memory (non-head): init: 007MiB, used: 237MiB, committed: 239MiB, max: 000MiB
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 5700X 8-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 33 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.40
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: Device
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MiB): 288.00
+	Graphics card #0 deviceId: 0x2584
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 26079.88
+	Virtual memory used (MiB): 14013.56
+	Swap memory total (MiB): 2048.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 598596.50, total: 937291.06
+	Space in storage for workdir (MiB): available: 598596.50, total: 937291.06
+	Operating System Version: GNU/Linux Linux Mint 21.2 (Victoria) build 5.15.0-198-generic
+	Process Elevated: false
+	Process Loads: Uptime: 26s, user: 150s (574.63%), kernel: 5s (20.79%), total: 156s (595.41%)
+	Process Virtual Size (MiB): 21084.47
+	Process Resident Size (MiB): 4204.45
+	JVM Flags: 0 total; 
+	Debug Flags: 0 total; 
+	Fabric Mods: 
+		fabric-api: Fabric API 0.159.0+26.2
+		fabric-api-base: Fabric API Base 2.0.4+ece063239e
+		fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 2.0.18+11e1c9a39e
+		fabric-biome-api-v1: Fabric Biome API (v1) 18.0.6+c7bd5b8e9e
+		fabric-block-api-v1: Fabric Block API (v1) 3.0.3+ec56b6019e
+		fabric-block-getter-api-v2: Fabric BlockGetter API (v2) 2.0.7+ec56b6019e
+		fabric-client-gametest-api-v1: Fabric Client Game Test API (v1) 6.0.1+0f4f1dca9e
+		fabric-command-api-v2: Fabric Command API (v2) 3.1.0+00cb03469e
+		fabric-content-registries-v0: Fabric Content Registries (v0) 11.3.2+37b1aa249e
+		fabric-convention-tags-v2: Fabric Convention Tags (v2) 4.7.1+1f023a9e9e
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 1.0.5+086d547a9e
+		fabric-creative-tab-api-v1: Fabric Creative Tab API (v1) 5.0.14+d871b99e9e
+		fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 2.2.18+515ac5339e
+		fabric-data-generation-api-v1: Fabric Data Generation API (v1) 25.5.1+aed122aa9e
+		fabric-debug-api-v1: Fabric Debug API (v1) 1.0.2+c792624d9e
+		fabric-dimensions-v1: Fabric Dimensions API (v1) 5.1.12+515ac5339e
+		fabric-entity-events-v1: Fabric Entity Events (v1) 5.0.5+06488ac19e
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 5.2.7+515ac5339e
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 4.0.8+46a6d00c9e
+		fabric-gametest-api-v1: Fabric Game Test API (v1) 4.0.21+4a7fa0819e
+		fabric-item-api-v1: Fabric Item API (v1) 14.5.0+c68f6cbe9e
+		fabric-key-mapping-api-v1: Fabric Key Mapping API (v1) 2.0.5+e2bdee789e
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 4.1.4+29b6eb019e
+		fabric-loot-api-v3: Fabric Loot API (v3) 3.0.17+06488ac19e
+		fabric-menu-api-v1: Fabric Menu API (v1) 2.0.16+086d547a9e
+		fabric-message-api-v1: Fabric Message API (v1) 7.0.8+bb2ed3f79e
+		fabric-model-loading-api-v1: Fabric Model Loading API (v1) 8.0.17+c80601bb9e
+		fabric-networking-api-v1: Fabric Networking API (v1) 6.3.3+72073ef09e
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 24.1.0+6fcd5f039e
+		fabric-particles-v1: Fabric Particles (v1) 5.0.18+d1756aa99e
+		fabric-permission-api-v1: Fabric Permission API (v1) 1.0.5+e442d8d09e
+		fabric-recipe-api-v1: Fabric Recipe API (v1) 9.0.21+11e1c9a39e
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 7.1.0+c7bd5b8e9e
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 14.1.4+2b0d8a229e
+		fabric-renderer-indigo: Fabric Renderer - Indigo 9.1.4+2b0d8a229e
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 6.0.4+06488ac19e
+		fabric-rendering-v1: Fabric Rendering (v1) 25.3.3+515ac5339e
+		fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 6.1.0+10e9a28b9e
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 3.3.20+4fc5413f9e
+		fabric-resource-loader-v1: Fabric Resource Loader (v1) 2.0.13+9edec1269e
+		fabric-screen-api-v1: Fabric Screen API (v1) 5.2.1+5087f8249e
+		fabric-serialization-api-v1: Fabric Serialization API (v1) 2.0.4+11a26f319e
+		fabric-sound-api-v1: Fabric Sound API (v1) 2.0.5+11a26f319e
+		fabric-tag-api-v1: Fabric Tag API (v1) 2.1.4+515ac5339e
+		fabric-transfer-api-v1: Fabric Transfer API (v1) 8.0.13+11dbb7d79e
+		fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 8.1.4+67c847259e
+		fabricloader: Fabric Loader 0.19.2
+		java: OpenJDK 64-Bit Server VM 26
+		minecraft: Minecraft 26.2
+		mixinextras: MixinExtras 0.5.4
+		paulsmod: Pauls Mod 1.0.3-26.2
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Player29'/103, l='ServerLevel[New World]', x=126.76, y=63.00, z=-17.34]]
+	Active Data Packs: vanilla, fabric-convention-tags-v2, fabric-gametest-api-v1, paulsmod
+	Available Data Packs: fabric-convention-tags-v2, fabric-gametest-api-v1, minecart_improvements, paulsmod, redstone_experiments, trade_rebalance, vanilla
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: 4034542144826444000
+	Suppressed Exceptions: ~~NONE~~
+	Type: Integrated Server
+	Is Modded: Definitely; Client brand changed to 'fabric'; Server brand changed to 'fabric'
+	Launched Version: Fabric

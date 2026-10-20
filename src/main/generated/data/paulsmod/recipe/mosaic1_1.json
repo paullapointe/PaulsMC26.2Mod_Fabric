@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:cobbled_deepslate",
+    "minecraft:emerald"
+  ],
+  "result": {
+    "id": "paulsmod:mosaic1_1"
+  }
+}

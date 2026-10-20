@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:paper",
+    "minecraft:paper",
+    "minecraft:paper",
+    "paulsmod:glue"
+  ],
+  "result": {
+    "id": "paulsmod:wrapping_paper"
+  }
+}

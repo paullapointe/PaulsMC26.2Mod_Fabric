@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "state=0": { "model": "paulsmod:block/unstablenetherrack0" },
+    "state=1": { "model": "paulsmod:block/unstablenetherrack1" },
+    "state=2": { "model": "paulsmod:block/unstablenetherrack2" },
+    "state=3": { "model": "paulsmod:block/unstablenetherrack3" },
+    "state=4": { "model": "paulsmod:block/unstablenetherrack4" }
+  }
+}

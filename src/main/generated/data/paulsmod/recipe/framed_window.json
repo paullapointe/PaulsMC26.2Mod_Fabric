@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:glass",
+    "minecraft:oak_planks"
+  ],
+  "result": {
+    "id": "paulsmod:framed_window"
+  }
+}

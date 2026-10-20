@@ -1,0 +1,15 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "paulsmod:wrench": 10
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 356,
+      "minecraft:total_world_time": 7731,
+      "minecraft:sneak_time": 95,
+      "minecraft:play_time": 356,
+      "minecraft:time_since_death": 356
+    }
+  },
+  "DataVersion": 4903
+}

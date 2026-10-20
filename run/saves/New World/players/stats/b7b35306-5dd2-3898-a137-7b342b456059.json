@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:torch": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 462,
+      "minecraft:walk_one_cm": 324,
+      "minecraft:total_world_time": 483,
+      "minecraft:leave_game": 1,
+      "minecraft:sneak_time": 27,
+      "minecraft:play_time": 462,
+      "minecraft:time_since_death": 462
+    }
+  },
+  "DataVersion": 4903
+}

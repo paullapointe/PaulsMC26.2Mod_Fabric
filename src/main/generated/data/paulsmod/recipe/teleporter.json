@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "paulsmod:reciever",
+    "paulsmod:traveling_stone"
+  ],
+  "result": {
+    "id": "paulsmod:teleporter"
+  }
+}

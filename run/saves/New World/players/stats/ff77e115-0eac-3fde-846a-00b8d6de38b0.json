@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 869,
+      "minecraft:total_world_time": 884,
+      "minecraft:leave_game": 1,
+      "minecraft:sneak_time": 115,
+      "minecraft:play_time": 869,
+      "minecraft:time_since_death": 869
+    },
+    "minecraft:used": {
+      "paulsmod:staff": 1
+    }
+  },
+  "DataVersion": 4903
+}

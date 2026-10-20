@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "paulsmod:block/brick_top",
+    "side": "paulsmod:block/clock11"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_andesite_pillar1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "paulsmod:andesite_pillar1"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "paulsmod:andesite_pillar2"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_andesite_pillar1"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "paulsmod:andesite_pillar2"
+    ]
+  }
+}

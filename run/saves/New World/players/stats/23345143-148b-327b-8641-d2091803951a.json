@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "minecraft:mined": {
+      "minecraft:cave_vines": 1
+    },
+    "minecraft:used": {
+      "minecraft:glow_berries": 22,
+      "minecraft:torch": 2
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 3397,
+      "minecraft:walk_one_cm": 2700,
+      "minecraft:total_world_time": 5305,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 3397,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 3397
+    }
+  },
+  "DataVersion": 4903
+}

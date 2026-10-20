@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "powered=false,facing=north": {
+      "model": "paulsmod:block/fueler"
+    },
+    "powered=false,facing=south": {
+      "model": "paulsmod:block/fueler",
+      "y": 180
+    },
+    "powered=false,facing=west": {
+      "model": "paulsmod:block/fueler",
+      "y": 270
+    },
+    "powered=false,facing=east": {
+      "model": "paulsmod:block/fueler",
+      "y": 90
+    },
+    "powered=true,facing=north": {
+      "model": "paulsmod:block/fueler_on"
+    },
+    "powered=true,facing=south": {
+      "model": "paulsmod:block/fueler_on",
+      "y": 180
+    },
+    "powered=true,facing=west": {
+      "model": "paulsmod:block/fueler_on",
+      "y": 270
+    },
+    "powered=true,facing=east": {
+      "model": "paulsmod:block/fueler_on",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "minecraft:egg",
+    "minecraft:bone_meal"
+  ],
+  "result": {
+    "id": "paulsmod:glue"
+  }
+}

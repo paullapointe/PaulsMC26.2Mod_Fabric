@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:bread": 6
+    },
+    "minecraft:used": {
+      "paulsmod:staff": 12,
+      "minecraft:bread": 1
+    },
+    "minecraft:broken": {
+      "paulsmod:staff": 1
+    },
+    "minecraft:custom": {
+      "minecraft:talked_to_villager": 1,
+      "minecraft:time_since_rest": 1544,
+      "minecraft:walk_one_cm": 6127,
+      "minecraft:total_world_time": 1560,
+      "minecraft:leave_game": 1,
+      "minecraft:interact_with_anvil": 1,
+      "minecraft:play_time": 1544,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 1544
+    }
+  },
+  "DataVersion": 4903
+}

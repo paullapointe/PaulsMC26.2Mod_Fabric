@@ -1,0 +1,10 @@
+{
+  "gives": {
+    "id": "paulsmod:florin"
+  },
+  "max_uses": 8.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "id": "minecraft:fishing_rod"
+  }
+}

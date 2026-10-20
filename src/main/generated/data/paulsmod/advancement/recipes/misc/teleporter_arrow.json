@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "paulsmod:teleporter_arrow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_traveling_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "paulsmod:traveling_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_traveling_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "paulsmod:teleporter_arrow"
+    ]
+  }
+}

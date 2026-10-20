@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "potions",
+  "ingredients": [
+    "minecraft:calcite",
+    "minecraft:redstone"
+  ],
+  "result": {
+    "count": 2,
+    "id": "paulsmod:sculk_powder"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tools",
+  "ingredients": [
+    "paulsmod:osc",
+    "minecraft:comparator"
+  ],
+  "result": {
+    "id": "paulsmod:helper"
+  }
+}

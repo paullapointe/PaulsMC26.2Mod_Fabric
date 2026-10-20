@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "ingredients": [
+    "minecraft:clay_ball",
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "count": 2,
+    "id": "paulsmod:clay_plate"
+  }
+}

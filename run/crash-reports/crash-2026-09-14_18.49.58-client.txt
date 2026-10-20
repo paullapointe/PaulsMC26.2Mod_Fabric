@@ -1,0 +1,357 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2026-09-14 18:49:58
+Description: Initializing game
+
+java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'fabric-networking-api-v1' at 'net.fabricmc.fabric.impl.networking.CommonPacketsImpl::init'!
+	at net.fabricmc.loader.impl.FabricLoaderImpl.lambda$invokeEntrypoints$0(FabricLoaderImpl.java:409)
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33)
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:407)
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:52)
+	at knot//net.minecraft.client.Minecraft.<init>(Minecraft.java:477)
+	at knot//net.minecraft.client.main.Main.main(Main.java:232)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+	Suppressed: java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed
+		at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.lambda$static$0(ServerLifecycleEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.update(ArrayBackedEvent.java:54)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.<init>(ArrayBackedEvent.java:50)
+		at knot//net.fabricmc.fabric.impl.base.event.EventFactoryImpl.createArrayBacked(EventFactoryImpl.java:47)
+		at knot//net.fabricmc.fabric.api.event.EventFactory.createArrayBacked(EventFactory.java:44)
+		at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.<clinit>(ServerLifecycleEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.tag.convention.v2.TranslationConventionLogWarnings.setupUntranslatedItemTagWarning(TranslationConventionLogWarnings.java:78)
+		at knot//net.fabricmc.fabric.impl.tag.convention.v2.TranslationConventionLogWarnings.onInitialize(TranslationConventionLogWarnings.java:72)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:440)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:336)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:231)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:502)
+		... 16 more
+	Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:380)
+		at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:237)
+		at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:435)
+		... 20 more
+	Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod] from phase [DEFAULT] in config [paulsmod.mixins.json] FAILED during APPLY
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:685)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:636)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:367)
+		... 23 more
+	Caused by: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Mixin paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod contains non-private static method getCurrentServer()Lnet/minecraft/server/MinecraftServer; [ -> MAIN Applicator Phase -> paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod -> Apply Methods -> ()Lnet/minecraft/server/MinecraftServer;:getCurrentServer]
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.checkMethodVisibility(MixinApplicatorStandard.java:861)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyNormalMethod(MixinApplicatorStandard.java:524)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMethods(MixinApplicatorStandard.java:507)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.lambda$runApplicatorPass$0(MixinApplicatorStandard.java:295)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.processMixins(MixinApplicatorStandard.java:381)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.runApplicatorPass(MixinApplicatorStandard.java:283)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:240)
+		at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:437)
+		at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:418)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351)
+		... 23 more
+	Suppressed: java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed
+		at knot//net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.lambda$static$0(ServerConfigurationConnectionEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.update(ArrayBackedEvent.java:54)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.<init>(ArrayBackedEvent.java:50)
+		at knot//net.fabricmc.fabric.impl.base.event.EventFactoryImpl.createArrayBacked(EventFactoryImpl.java:47)
+		at knot//net.fabricmc.fabric.api.event.EventFactory.createArrayBacked(EventFactory.java:44)
+		at knot//net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.<clinit>(ServerConfigurationConnectionEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.registry.sync.FabricRegistryInit.onInitialize(FabricRegistryInit.java:37)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:440)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:336)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:231)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:502)
+		... 15 more
+	Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:380)
+		at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:237)
+		at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:435)
+		... 19 more
+	Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod] from phase [DEFAULT] in config [paulsmod.mixins.json] FAILED during APPLY
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:685)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:636)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:367)
+		... 22 more
+	Caused by: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Mixin paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod contains non-private static method getCurrentServer()Lnet/minecraft/server/MinecraftServer; [ -> MAIN Applicator Phase -> paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod -> Apply Methods -> ()Lnet/minecraft/server/MinecraftServer;:getCurrentServer]
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.checkMethodVisibility(MixinApplicatorStandard.java:861)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyNormalMethod(MixinApplicatorStandard.java:524)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMethods(MixinApplicatorStandard.java:507)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.lambda$runApplicatorPass$0(MixinApplicatorStandard.java:295)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.processMixins(MixinApplicatorStandard.java:381)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.runApplicatorPass(MixinApplicatorStandard.java:283)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:240)
+		at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:437)
+		at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:418)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351)
+		... 22 more
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
+		at knot//net.fabricmc.fabric.impl.dimension.DimensionModificationImpl.onInitialize(DimensionModificationImpl.java:43)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed [in thread "Render thread"]
+		at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.lambda$static$0(ServerLifecycleEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.update(ArrayBackedEvent.java:54)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.<init>(ArrayBackedEvent.java:50)
+		at knot//net.fabricmc.fabric.impl.base.event.EventFactoryImpl.createArrayBacked(EventFactoryImpl.java:47)
+		at knot//net.fabricmc.fabric.api.event.EventFactory.createArrayBacked(EventFactory.java:44)
+		at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.<clinit>(ServerLifecycleEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.tag.convention.v2.TranslationConventionLogWarnings.setupUntranslatedItemTagWarning(TranslationConventionLogWarnings.java:78)
+		at knot//net.fabricmc.fabric.impl.tag.convention.v2.TranslationConventionLogWarnings.onInitialize(TranslationConventionLogWarnings.java:72)
+		... 8 more
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents
+		at knot//net.fabricmc.fabric.impl.particle.ExtendedBlockParticleOptionSync.onInitialize(ExtendedBlockParticleOptionSync.java:37)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed [in thread "Render thread"]
+		at knot//net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.lambda$static$0(ServerConfigurationConnectionEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.update(ArrayBackedEvent.java:54)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.<init>(ArrayBackedEvent.java:50)
+		at knot//net.fabricmc.fabric.impl.base.event.EventFactoryImpl.createArrayBacked(EventFactoryImpl.java:47)
+		at knot//net.fabricmc.fabric.api.event.EventFactory.createArrayBacked(EventFactory.java:44)
+		at knot//net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.<clinit>(ServerConfigurationConnectionEvents.java:36)
+		at knot//net.fabricmc.fabric.impl.registry.sync.FabricRegistryInit.onInitialize(FabricRegistryInit.java:37)
+		... 8 more
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents
+		at knot//net.fabricmc.fabric.impl.attachment.sync.AttachmentSync.onInitialize(AttachmentSync.java:128)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed [in thread "Render thread"]]
+	Suppressed: java.lang.IllegalArgumentException: Cannot register handler as no payload type has been registered with name "paulsmods:one_ring_toggle" for SERVERBOUND PLAY
+		at knot//net.fabricmc.fabric.impl.networking.GlobalReceiverRegistry.assertPayloadType(GlobalReceiverRegistry.java:223)
+		at knot//net.fabricmc.fabric.impl.networking.GlobalReceiverRegistry.registerGlobalReceiver(GlobalReceiverRegistry.java:85)
+		at knot//net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(ServerPlayNetworking.java:79)
+		at knot//net.lapointep.paulsmod.network.ModMessages.registerServerHandlers(ModMessages.java:14)
+		at knot//net.lapointep.paulsmod.PaulsMod.onInitialize(PaulsMod.java:37)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents
+		at knot//net.fabricmc.fabric.impl.recipe.ingredient.CustomIngredientSync.onInitialize(CustomIngredientSync.java:81)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
+		at knot//net.fabricmc.fabric.impl.recipe.sync.RecipeSyncImpl.onInitialize(RecipeSyncImpl.java:55)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed [in thread "Render thread"]]
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
+		at knot//net.fabricmc.fabric.impl.lookup.ApiLookupImpl.onInitialize(ApiLookupImpl.java:26)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed [in thread "Render thread"]]
+	Suppressed: java.lang.BootstrapMethodError: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed
+		at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.lambda$static$0(ServerLevelEvents.java:32)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.update(ArrayBackedEvent.java:54)
+		at knot//net.fabricmc.fabric.impl.base.event.ArrayBackedEvent.<init>(ArrayBackedEvent.java:50)
+		at knot//net.fabricmc.fabric.impl.base.event.EventFactoryImpl.createArrayBacked(EventFactoryImpl.java:47)
+		at knot//net.fabricmc.fabric.api.event.EventFactory.createArrayBacked(EventFactory.java:44)
+		at knot//net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents.<clinit>(ServerLevelEvents.java:32)
+		at knot//net.fabricmc.fabric.impl.event.lifecycle.LifecycleEventsImpl.onInitialize(LifecycleEventsImpl.java:50)
+		at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+		... 7 more
+	Caused by: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:440)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:336)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:231)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:502)
+		... 15 more
+	Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:380)
+		at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:237)
+		at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202)
+		at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:435)
+		... 19 more
+	Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod] from phase [DEFAULT] in config [paulsmod.mixins.json] FAILED during APPLY
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:685)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:636)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:367)
+		... 22 more
+	Caused by: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Mixin paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod contains non-private static method getCurrentServer()Lnet/minecraft/server/MinecraftServer; [ -> MAIN Applicator Phase -> paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod -> Apply Methods -> ()Lnet/minecraft/server/MinecraftServer;:getCurrentServer]
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.checkMethodVisibility(MixinApplicatorStandard.java:861)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyNormalMethod(MixinApplicatorStandard.java:524)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMethods(MixinApplicatorStandard.java:507)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.lambda$runApplicatorPass$0(MixinApplicatorStandard.java:295)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.processMixins(MixinApplicatorStandard.java:381)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.runApplicatorPass(MixinApplicatorStandard.java:283)
+		at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:240)
+		at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:437)
+		at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:418)
+		at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351)
+		... 22 more
+Caused by: net.fabricmc.loader.api.EntrypointException: Exception while loading entries for entrypoint 'main' provided by 'fabric-networking-api-v1'
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:56)
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405)
+	... 7 more
+Caused by: java.lang.RuntimeException: Mixin transformation of net.minecraft.server.MinecraftServer failed
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:440)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:336)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:231)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:502)
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3011)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2330)
+	at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:68)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:124)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53)
+	... 8 more
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:380)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:237)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:435)
+	... 18 more
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod] from phase [DEFAULT] in config [paulsmod.mixins.json] FAILED during APPLY
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:685)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:636)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:367)
+	... 21 more
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Mixin paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod contains non-private static method getCurrentServer()Lnet/minecraft/server/MinecraftServer; [ -> MAIN Applicator Phase -> paulsmod.mixins.json:MinecraftServerMixin from mod paulsmod -> Apply Methods -> ()Lnet/minecraft/server/MinecraftServer;:getCurrentServer]
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.checkMethodVisibility(MixinApplicatorStandard.java:861)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyNormalMethod(MixinApplicatorStandard.java:524)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMethods(MixinApplicatorStandard.java:507)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.lambda$runApplicatorPass$0(MixinApplicatorStandard.java:295)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.processMixins(MixinApplicatorStandard.java:381)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.runApplicatorPass(MixinApplicatorStandard.java:283)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:240)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:437)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:418)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351)
+	... 21 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.fabricmc.loader.impl.FabricLoaderImpl.lambda$invokeEntrypoints$0(FabricLoaderImpl.java:409)
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33)
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:407)
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:52)
+	at knot//net.minecraft.client.Minecraft.<init>(Minecraft.java:477)
+
+-- Initialization --
+Details:
+	Modules: 
+Stacktrace:
+	at knot//net.minecraft.client.main.Main.main(Main.java:232)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+-- System Details --
+Details:
+	Minecraft Version: 26.1.2
+	Minecraft Version ID: 26.1.2
+	Operating System: Linux (amd64) version 5.15.0-191-generic
+	Java Version: 26.0.2.1, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 1224388472 bytes (1167 MiB) / 1585446912 bytes (1512 MiB) up to 12599689216 bytes (12016 MiB)
+	Memory (heap): init: 008MiB, used: 336MiB, committed: 1512MiB, max: 12016MiB
+	Memory (non-head): init: 007MiB, used: 119MiB, committed: 120MiB, max: 000MiB
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 5700X 8-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 33 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.40
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: Device
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MiB): 288.00
+	Graphics card #0 deviceId: 0x2584
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 26079.87
+	Virtual memory used (MiB): 15880.16
+	Swap memory total (MiB): 2048.00
+	Swap memory used (MiB): 2048.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 606070.06, total: 937291.06
+	Space in storage for workdir (MiB): available: 606070.06, total: 937291.06
+	JVM Flags: 0 total; 
+	Debug Flags: 0 total; 
+	Fabric Mods: 
+		fabric-api: Fabric API 0.148.0+26.1.2
+		fabric-api-base: Fabric API Base 2.0.3+ece063234c
+		fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 2.0.11+d5a053b64c
+		fabric-biome-api-v1: Fabric Biome API (v1) 18.0.4+35c80edc4c
+		fabric-block-api-v1: Fabric Block API (v1) 3.0.2+ec56b6014c
+		fabric-block-getter-api-v2: Fabric BlockGetter API (v2) 2.0.6+ec56b6014c
+		fabric-client-gametest-api-v1: Fabric Client Game Test API (v1) 5.0.16+cef2a4834c
+		fabric-command-api-v2: Fabric Command API (v2) 3.0.5+e2bdee784c
+		fabric-content-registries-v0: Fabric Content Registries (v0) 11.1.0+1a3b26974c
+		fabric-convention-tags-v2: Fabric Convention Tags (v2) 4.5.0+c52289644c
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 1.0.3+9f78a5a84c
+		fabric-creative-tab-api-v1: Fabric Creative Tab API (v1) 5.0.10+d871b99e4c
+		fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 2.2.4+d602a8964c
+		fabric-data-generation-api-v1: Fabric Data Generation API (v1) 24.1.0+47b0d63c4c
+		fabric-debug-api-v1: Fabric Debug API (v1) 1.0.1+c792624d4c
+		fabric-dimensions-v1: Fabric Dimensions API (v1) 5.1.5+9cbf5da54c
+		fabric-entity-events-v1: Fabric Entity Events (v1) 5.0.2+e2bdee784c
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 5.2.0+a67251b84c
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 4.0.5+d871b99e4c
+		fabric-gametest-api-v1: Fabric Game Test API (v1) 4.0.13+00a1fba64c
+		fabric-item-api-v1: Fabric Item API (v1) 14.1.1+73d134684c
+		fabric-key-mapping-api-v1: Fabric Key Mapping API (v1) 2.0.4+e2bdee784c
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 4.1.0+6d50a0854c
+		fabric-loot-api-v3: Fabric Loot API (v3) 3.0.11+00a1fba64c
+		fabric-menu-api-v1: Fabric Menu API (v1) 2.0.12+d871b99e4c
+		fabric-message-api-v1: Fabric Message API (v1) 7.0.5+dae8ce3e4c
+		fabric-model-loading-api-v1: Fabric Model Loading API (v1) 8.0.6+c80601bb4c
+		fabric-networking-api-v1: Fabric Networking API (v1) 6.3.0+50a808ce4c
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 23.0.14+b95dd56e4c
+		fabric-particles-v1: Fabric Particles (v1) 5.0.14+b61fef434c
+		fabric-recipe-api-v1: Fabric Recipe API (v1) 9.0.14+be4b75ae4c
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 7.0.12+b61fef434c
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 13.0.3+c80601bb4c
+		fabric-renderer-indigo: Fabric Renderer - Indigo 8.1.0+1403e82c4c
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 6.0.1+d871b99e4c
+		fabric-rendering-v1: Fabric Rendering (v1) 23.1.0+1403e82c4c
+		fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 6.0.5+00a1fba64c
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 3.3.16+4fc5413f4c
+		fabric-resource-loader-v1: Fabric Resource Loader (v1) 2.0.9+d871b99e4c
+		fabric-screen-api-v1: Fabric Screen API (v1) 5.0.1+d871b99e4c
+		fabric-serialization-api-v1: Fabric Serialization API (v1) 2.0.3+11a26f314c
+		fabric-sound-api-v1: Fabric Sound API (v1) 2.0.4+11a26f314c
+		fabric-tag-api-v1: Fabric Tag API (v1) 2.0.9+11a26f314c
+		fabric-transfer-api-v1: Fabric Transfer API (v1) 8.0.5+357ea7334c
+		fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 8.1.0+acd9108d4c
+		fabricloader: Fabric Loader 0.19.2
+		java: OpenJDK 64-Bit Server VM 26
+		minecraft: Minecraft 26.1.2
+		mixinextras: MixinExtras 0.5.4
+		paulsmod: Pauls Mod 0.0.8-26.1.2
+	Launched Version: Fabric
+	Backend library: LWJGL version 3.4.1-snapshot
+	Backend API: Unknown
+	Window size: <not initialized>
+	GFLW Platform: <error>
+	Render Extensions: ERR
+	GL debug messages: <no renderer available>
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Universe: 404
+	Type: Client
+	Locale: en_CA
+	System encoding: UTF-8
+	File encoding: UTF-8
+	CPU: 16x AMD Ryzen 7 5700X 8-Core Processor

@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "minecraft:broken": {
+      "paulsmod:staff": 1
+    },
+    "minecraft:used": {
+      "paulsmod:end_staff": 1,
+      "paulsmod:staff": 6,
+      "minecraft:torch": 3
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_crafting_table": 1,
+      "minecraft:time_since_rest": 1563,
+      "minecraft:walk_one_cm": 10653,
+      "minecraft:leave_game": 2,
+      "minecraft:damage_taken": 400,
+      "minecraft:play_time": 5368,
+      "minecraft:jump": 20,
+      "minecraft:time_since_death": 1459,
+      "minecraft:fall_one_cm": 1800,
+      "minecraft:total_world_time": 6130,
+      "minecraft:fly_one_cm": 4643,
+      "minecraft:interact_with_anvil": 3,
+      "minecraft:crouch_one_cm": 1,
+      "minecraft:sneak_time": 267,
+      "minecraft:deaths": 1
+    },
+    "minecraft:killed_by": {
+      "minecraft:zombie": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:rotten_flesh": 1
+    }
+  },
+  "DataVersion": 4903
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_osc": {
+      "conditions": {
+        "items": [
+          {
+            "items": "paulsmod:osc"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "paulsmod:reciever"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_osc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "paulsmod:reciever"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "paulsmod:block/reciever" },
+    "powered=true": { "model": "paulsmod:block/reciever_on" }
+  }
+}

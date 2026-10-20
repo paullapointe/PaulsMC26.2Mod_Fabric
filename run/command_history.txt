@@ -1,0 +1,50 @@
+/time set minecraft:day
+/weather clear
+/gamemode survival
+/gamemode creative
+/time set minecraft:day
+/kill @e[type=minecraft:pillager]
+/time set minecraft:day
+/weather clear
+/time set minecraft:day
+/give Player135 paulsmod:camo_block
+/time set minecraft:day
+/weather clear
+/kill @e[type=minecraft:pillager]
+/give Player572 paulsmod:pillar1
+/time set minecraft:day
+/summon minecraft:zombie
+/time set minecraft:day
+/weather clear
+/gamemode survival
+/tp 78d40be5-a0c2-4da8-a830-8c5a218cfb6b Player993
+/time set minecraft:day
+/summon cat
+/give Player160 clock
+/give Player160 paulsmod:cl
+/give Player160 paulsmod:clock
+/time set minecraft:day
+/Mansion
+/witch hut
+/time set minecraft:day
+/weather clear
+/time set minecraft:day
+/locate biome minecraft:lush_caves
+/tp Player851 216 14 95
+/time set minecraft:day
+/weather clear
+/time set minecraft:day
+/weather clear
+/summon minecraft:zombie
+/summon minecraft:creaking
+/time set minecraft:day
+/time set minecraft:night
+/summon minecraft:zombie
+/time set minecraft:midnight
+/time set minecraft:day
+/experience add Player414 100
+/summon minecraft:zombie
+/time set minecraft:day
+/experience add Player399 500
+/summon minecraft:zombie
+/give Player720 book 64

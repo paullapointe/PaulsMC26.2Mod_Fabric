@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "particle": "#board_face"
+  },
+  "elements": [
+    {
+      "from": [0, 2, 7.5],
+      "to": [16, 14, 8.5],
+      "faces": {
+        "north": {"uv": [0, 2, 16, 14], "texture": "#board_face"},
+        "south": {"uv": [0, 2, 16, 14], "texture": "#board_face"},
+        "east":  {"uv": [7.5, 2, 8.5, 14], "texture": "#board_face"},
+        "west":  {"uv": [7.5, 2, 8.5, 14], "texture": "#board_face"},
+        "up":    {"uv": [0, 7.5, 16, 8.5], "texture": "#board_face"},
+        "down":  {"uv": [0, 7.5, 16, 8.5], "texture": "#board_face"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "paulsmods:block/toggle_sign_base",
+  "textures": {
+    "board_face": "paulsmods:block/sign_close"
+  }
+}

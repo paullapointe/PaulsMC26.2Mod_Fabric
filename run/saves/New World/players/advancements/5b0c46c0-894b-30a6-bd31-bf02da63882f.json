@@ -1,0 +1,93 @@
+{
+  "minecraft:recipes/misc/blue_dye": {
+    "criteria": {
+      "has_lapis_lazuli": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bookshelf": {
+    "criteria": {
+      "has_book": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lapis_block": {
+    "criteria": {
+      "has_lapis_lazuli": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "paulsmod:recipes/food/leather_from_rotten_flesh": {
+    "criteria": {
+      "has_raw_meat": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/lectern": {
+    "criteria": {
+      "has_book": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_bookshelf": {
+    "criteria": {
+      "has_book": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_bone": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/writable_book": {
+    "criteria": {
+      "has_book": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2026-10-20 11:16:53 -0400"
+    },
+    "done": false
+  },
+  "paulsmod:recipes/misc/deepslate_pillar3": {
+    "criteria": {
+      "has_deepslate_pillar2": "2026-10-20 11:17:24 -0400"
+    },
+    "done": true
+  },
+  "paulsmod:recipes/misc/deepslate_pillar2": {
+    "criteria": {
+      "has_deepslate_pillar1": "2026-10-20 11:17:15 -0400"
+    },
+    "done": true
+  },
+  "paulsmod:recipes/misc/deepslate_pillar1": {
+    "criteria": {
+      "has_big_ds_pillar": "2026-10-20 11:16:52 -0400"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2026-10-20 11:17:04 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 4903
+}

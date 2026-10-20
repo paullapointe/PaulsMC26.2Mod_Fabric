@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "blocks",
+  "ingredients": [
+    "paulsmod:deepslate_pillar2"
+  ],
+  "result": {
+    "id": "paulsmod:deepslate_pillar3"
+  }
+}

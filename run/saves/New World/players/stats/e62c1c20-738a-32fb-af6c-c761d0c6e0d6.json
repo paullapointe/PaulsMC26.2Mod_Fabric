@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "paulsmod:diamond_staff": 7
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1596,
+      "minecraft:walk_one_cm": 3248,
+      "minecraft:total_world_time": 2528,
+      "minecraft:interact_with_anvil": 2,
+      "minecraft:sneak_time": 91,
+      "minecraft:play_time": 1596,
+      "minecraft:time_since_death": 1596
+    }
+  },
+  "DataVersion": 4903
+}

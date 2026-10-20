@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2647,
+      "minecraft:total_world_time": 2665,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 2647,
+      "minecraft:enchant_item": 11,
+      "minecraft:time_since_death": 2647,
+      "minecraft:drop": 2
+    },
+    "minecraft:dropped": {
+      "minecraft:enchanted_book": 2
+    },
+    "minecraft:picked_up": {
+      "minecraft:enchanted_book": 2
+    }
+  },
+  "DataVersion": 4903
+}
