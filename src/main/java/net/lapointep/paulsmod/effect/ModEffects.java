@@ -25,6 +25,7 @@ public class ModEffects {
     public static final MobEffect BANDAGE = register("bandage", new BandageEffect(MobEffectCategory.BENEFICIAL, 0xFFFFFF));
     public static final MobEffect INCREASED_HEALTH = register("increased_health", new IncreasedHealthEffect(MobEffectCategory.BENEFICIAL, 0xFF0000));
     public static final MobEffect INCREASED_SPEED = register("increased_speed", new IncreasedSpeedEffect(MobEffectCategory.BENEFICIAL, 0x00FF00));
+    public static final MobEffect PROTECTION = register("protection", new ProtectionEffect(MobEffectCategory.BENEFICIAL, 0xFFFF00));
   //  public static final MobEffect FABULOUS_HAIR = register("fabulous_hair", new FabulousHairEffect(MobEffectCategory.BENEFICIAL, 0xFF69B4));
   //  public static final MobEffect INVISIBILITY = register("invisibility", new InvisibilityEffect(MobEffectCategory.BENEFICIAL, 0xFFFFFF));
 

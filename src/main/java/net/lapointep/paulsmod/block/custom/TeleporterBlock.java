@@ -5,8 +5,14 @@ import net.lapointep.paulsmod.block.entity.TeleporterBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
@@ -58,6 +64,28 @@ public class TeleporterBlock extends BaseEntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new TeleporterBlockEntity(pos, state);
+    }
+
+    @Override
+    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
+        if (!level.isClientSide() && state.getValue(POWERED) && entity instanceof Player player) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof TeleporterBlockEntity teleporterBlockEntity) {
+                BlockPos targetPos = teleporterBlockEntity.getTargetPos();
+                String targetDim = teleporterBlockEntity.getTargetDimension();
+                
+                if (targetPos != null && !targetPos.equals(BlockPos.ZERO)) {
+                    ServerLevel serverLevel = (ServerLevel) level;
+                    ResourceKey<Level> targetDimKey = ResourceKey.create(Registries.DIMENSION, Identifier.parse(targetDim));
+                    ServerLevel targetLevel = serverLevel.getServer().getLevel(targetDimKey);
+                    
+                    if (targetLevel != null) {
+                        player.teleportTo(targetLevel, targetPos.getX() + 0.5, targetPos.getY() + 1.0, targetPos.getZ() + 0.5, java.util.Set.of(), player.getYRot(), player.getXRot(), false);
+                    }
+                }
+            }
+        }
+        super.stepOn(level, pos, state, entity);
     }
 
     @Override

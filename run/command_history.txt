@@ -1,4 +1,3 @@
-/time set minecraft:day
 /weather clear
 /gamemode survival
 /gamemode creative
@@ -48,3 +47,4 @@
 /experience add Player399 500
 /summon minecraft:zombie
 /give Player720 book 64
+/time set minecraft:day

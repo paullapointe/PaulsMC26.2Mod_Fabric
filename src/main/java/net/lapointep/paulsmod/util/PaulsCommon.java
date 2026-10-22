@@ -143,6 +143,9 @@ public class PaulsCommon {
             if (level.getFluidState(pos.relative(direction)).is(FluidTags.LAVA)) {
                 count++;
             }
+            else if (level.getBlockState(pos.relative(direction)).is(Blocks.LAVA_CAULDRON)) {
+                count++;
+            }
         }
         return count;
     }
@@ -151,6 +154,9 @@ public class PaulsCommon {
         int count = 0;
         for (Direction direction : Direction.values()) {
             if (level.getFluidState(pos.relative(direction)).is(FluidTags.WATER)) {
+                count++;
+            }
+            else if (level.getBlockState(pos.relative(direction)).is(Blocks.WATER_CAULDRON)) {
                 count++;
             }
         }

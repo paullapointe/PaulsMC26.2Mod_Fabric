@@ -2,14 +2,8 @@ package net.lapointep.paulsmod.enchantments;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.lapointep.paulsmod.effect.HealingEffect;
-import net.lapointep.paulsmod.effect.ModEffects;
-import net.minecraft.core.Holder;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.lapointep.paulsmod.PaulsMod;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +20,7 @@ public record HealEnchantmentEffect(LevelBasedValue amount) implements Enchantme
     @Override
     public void apply(ServerLevel serverLevel, int level, EnchantedItemInUse context, Entity target, Vec3 pos) {
         if (target instanceof LivingEntity victim && context.owner() instanceof Player) {
+            PaulsMod.LOGGER.info("Healing " + victim.getName().getString() + " for " + this.amount.calculate(level*level));
             victim.heal((float) this.amount.calculate(level*level));
         }
     }

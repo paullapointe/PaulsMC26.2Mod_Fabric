@@ -2,11 +2,19 @@ package net.lapointep.paulsmod.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.lapointep.paulsmod.PaulsMod;
+import net.lapointep.paulsmod.access.ProtectionDataHolder;
 import net.lapointep.paulsmod.block.entity.ModBlockEntities;
 import net.lapointep.paulsmod.block.entity.AltarBlockEntity;
+import net.lapointep.paulsmod.effect.ModEffects;
+import net.lapointep.paulsmod.item.ModItems;
+import net.lapointep.paulsmod.util.Destination;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
@@ -71,7 +79,18 @@ public class AlterBlock extends BaseEntityBlock {
                 if (stackInAlter.isEmpty() && !stackInHand.isEmpty()) {
                     // Place item
                     PaulsMod.LOGGER.info("Placing item in alter");
-                    altarBlockEntity.setItem(0, stackInHand.split(1));
+                    if (stackInHand.is(ModItems.FLORIN)) {
+                        if (player instanceof ProtectionDataHolder dataHolder) {
+                            dataHolder.paulsmod$setProtectionDestination(new Destination(pos, level.dimension()));
+                        }
+                        Holder<MobEffect> protectionEffect = BuiltInRegistries.MOB_EFFECT.wrapAsHolder(ModEffects.PROTECTION);
+                        player.addEffect(new MobEffectInstance(protectionEffect, 30 * 60 * 20));
+                        stackInHand.split(1);
+                        // The florin is consumed
+                    }
+                    else {
+                        altarBlockEntity.setItem(0, stackInHand.split(1));
+                    }
                     return InteractionResult.SUCCESS;
                 } else if (!stackInAlter.isEmpty()) {
                     // Take item
