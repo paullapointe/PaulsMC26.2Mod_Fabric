@@ -21,6 +21,11 @@ public class ModEnchantmentEffects {
     public static final MapCodec<TorchEnchantmentEffect> TORCH_EFFECT = register("torch_effect",TorchEnchantmentEffect.CODEC);
     public static final MapCodec<NoFlameEnchantmentEffect> NOFLAME_EFFECT = register("noflame_effect",NoFlameEnchantmentEffect.CODEC);
 
+    public static final MapCodec<LocateEnchantmentEffect> LOCATE_EFFECT = register("locate_effect", LocateEnchantmentEffect.CODEC);
+    public static final MapCodec<TeleportEnchantmentEffect> TELEPORT_EFFECT = register("teleport_effect", TeleportEnchantmentEffect.CODEC);
+    //public static final MapCodec<FreezeEnchantmentEffect> FREEZE_EFFECT = register("freeze_effect", FreezeEnchantmentEffect.CODEC);
+    //public static final MapCodec<LocateEnchantmentEffect> LOCATE_EFFECT = register("locate_effect", LocateEnchantmentEffect.CODEC);
+
     private static <T extends EnchantmentEntityEffect> MapCodec<T> register(String id, MapCodec<T> codec) {
         return Registry.register(
                 BuiltInRegistries.ENCHANTMENT_ENTITY_EFFECT_TYPE,

@@ -28,40 +28,12 @@ public class ModEnchantments {
     public static final ResourceKey<Enchantment> TORCH = createKey("torch");
     public static final ResourceKey<Enchantment> NOFLAME = createKey("noflame");
     public static final ResourceKey<Enchantment> FEAR = createKey("fear");
-   // public static final ResourceKey<Enchantment> LOCATE = createKey("locate");
-    //public static final ResourceKey<Enchantment> TELEPORT = createKey("teleport");
+    public static final ResourceKey<Enchantment> LOCATE = createKey("locate");
+    public static final ResourceKey<Enchantment> TELEPORT = createKey("teleport");
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
-/*
-        context.register(TELEPORT, Enchantment.enchantment(Enchantment.definition(
-                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                5, 3,
-                Enchantment.dynamicCost(1, 11),  // minCost: 1 + 11 * (level - 1)
-                Enchantment.dynamicCost(12, 11), // maxCost: 12 + 11 * (level - 1)
-                2,
-                EquipmentSlotGroup.MAINHAND
-        )).withEffect(
-                EnchantmentEffectComponents.POST_ATTACK,
-                EnchantmentTarget.ATTACKER,
-                EnchantmentTarget.VICTIM,
-                new TeleportEnchantmentEffect(LevelBasedValue.perLevel(1.0f))
-        ).build(TELEPORT.identifier()));
 
-        context.register(LOCATE, Enchantment.enchantment(Enchantment.definition(
-                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                5, 3,
-                Enchantment.dynamicCost(1, 11),  // minCost: 1 + 11 * (level - 1)
-                Enchantment.dynamicCost(12, 11), // maxCost: 12 + 11 * (level - 1)
-                2,
-                EquipmentSlotGroup.MAINHAND
-        )).withEffect(
-                EnchantmentEffectComponents.POST_ATTACK,
-                EnchantmentTarget.ATTACKER,
-                EnchantmentTarget.VICTIM,
-                new LocateEnchantmentEffect(LevelBasedValue.perLevel(1.0f))
-        ).build(LOCATE.identifier()));
-*/
         context.register(LIGHTENING, Enchantment.enchantment(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                 5, 3,
@@ -215,6 +187,34 @@ public class ModEnchantments {
                 EnchantmentTarget.VICTIM,
                 new FearEnchantmentEffect(LevelBasedValue.perLevel(1.0f))
         ).build(FEAR.identifier()));
+
+        context.register(LOCATE, Enchantment.enchantment(Enchantment.definition(
+                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                5, 3,
+                Enchantment.dynamicCost(1, 11),  // minCost: 1 + 11 * (level - 1)
+                Enchantment.dynamicCost(12, 11), // maxCost: 12 + 11 * (level - 1)
+                2,
+                EquipmentSlotGroup.MAINHAND
+        )).withEffect(
+                EnchantmentEffectComponents.POST_ATTACK,
+                EnchantmentTarget.ATTACKER,
+                EnchantmentTarget.VICTIM,
+                new LocateEnchantmentEffect(LevelBasedValue.perLevel(1.0f))
+        ).build(LOCATE.identifier()));
+
+        context.register(TELEPORT, Enchantment.enchantment(Enchantment.definition(
+                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                5, 3,
+                Enchantment.dynamicCost(1, 11),  // minCost: 1 + 11 * (level - 1)
+                Enchantment.dynamicCost(12, 11), // maxCost: 12 + 11 * (level - 1)
+                2,
+                EquipmentSlotGroup.MAINHAND
+        )).withEffect(
+                EnchantmentEffectComponents.POST_ATTACK,
+                EnchantmentTarget.ATTACKER,
+                EnchantmentTarget.VICTIM,
+                new TeleportEnchantmentEffect(LevelBasedValue.perLevel(1.0f))
+        ).build(TELEPORT.identifier()));
     }
 
     private static ResourceKey<Enchantment> createKey(String name) {

@@ -88,3 +88,6 @@ nb-configuration.xml
 # Windows
 Thumbs.db
 desktop.ini
+directory_name/
+run/
+src/main/generated/

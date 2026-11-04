@@ -287,7 +287,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.PLATE), has(ModBlocks.PLATE))
                         .group("tools").save(output);
 
-                shapeless(RecipeCategory.MISC, ModBlocks.STORESHELF, 1)
+                shapeless(RecipeCategory.MISC, ModBlocks.DISPLAYSHELF, 1)
                         .requires(Blocks.STONE_SLAB,3)
                         .unlockedBy(getHasName(Blocks.STONE_SLAB), has(Blocks.STONE_SLAB))
                         .group("tools").save(output);
