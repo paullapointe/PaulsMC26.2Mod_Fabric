@@ -191,12 +191,6 @@
     },
     "done": true
   },
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:forest": "2026-10-16 12:59:20 -0400"
-    },
-    "done": false
-  },
   "minecraft:recipes/combat/iron_spear": {
     "criteria": {
       "has_iron_ingot": "2026-10-16 12:59:19 -0400"
@@ -218,6 +212,30 @@
   "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
     "criteria": {
       "has_iron_ingot": "2026-10-16 12:59:19 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2026-10-16 12:59:20 -0400"
+    },
+    "done": false
+  },
+  "minecraft:recipes/misc/blue_dye": {
+    "criteria": {
+      "has_lapis_lazuli": "2026-11-03 14:31:50 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lapis_block": {
+    "criteria": {
+      "has_lapis_lazuli": "2026-11-03 14:31:50 -0500"
+    },
+    "done": true
+  },
+  "paulsmod:recipes/misc/teleporter_arrow": {
+    "criteria": {
+      "has_traveling_stone": "2026-11-03 14:31:50 -0500"
     },
     "done": true
   },

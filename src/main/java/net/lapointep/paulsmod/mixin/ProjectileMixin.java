@@ -81,7 +81,9 @@ public abstract class ProjectileMixin {
                     }
                 }
                 else if (contents.is(ModPotions.STONE_POTION)) {
-                    if (blockState.is(Blocks.STONE)) {
+                    if (blockState.is(Blocks.STONE) ||
+                            blockState.is(Blocks.DEEPSLATE)||
+                            blockState.is(Blocks.TUFF)) {
                         level.setBlockAndUpdate(hitPos, ModBlocks.UNSTABLESTONE.defaultBlockState());
                     }
                 }

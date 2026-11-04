@@ -26,6 +26,7 @@ e31dd9f5eac13243c6fd18fa07dd2cecd325b490 data/paulsmod/advancement/recipes/misc/
 8f91e12bd8373138229b1b5415904a98c88bd5ba data/paulsmod/advancement/recipes/misc/diamond_staff.json
 78a26c95ed832e58f9b4a571c99c3b34a8962465 data/paulsmod/advancement/recipes/misc/dirt_powder.json
 a40671c2125a1c6d2c3bc25a8c58ce7c6bd19a7f data/paulsmod/advancement/recipes/misc/dryer.json
+191f3c4b549ecce44002543aeaab02260c0458bf data/paulsmod/advancement/recipes/misc/echo_staff.json
 c7da384dffd2c28537815a58e78938fe68a52789 data/paulsmod/advancement/recipes/misc/emerald_staff.json
 56ef4a9f25f0b160df7fa5addc7e756a1a216249 data/paulsmod/advancement/recipes/misc/end_staff.json
 c5f2cb9f78a7e7c9ca2f6ad850dd86360c1a59a9 data/paulsmod/advancement/recipes/misc/enderlamp.json
@@ -46,6 +47,7 @@ add3d14537a94f99c8fb8f5261f1de2c72535200 data/paulsmod/advancement/recipes/misc/
 5d2d109a2758ec4d2cd2d22658918c17b1f770a2 data/paulsmod/advancement/recipes/misc/lattice_arch.json
 777a568fdacd53f9b7b8c00fb11110305a7016aa data/paulsmod/advancement/recipes/misc/lava_core.json
 d03eb729e0268c7a473e58d04a0da7d96d33c876 data/paulsmod/advancement/recipes/misc/lava_powder.json
+a5bb7676bb34c75d879736f507d9aa2165bec8d1 data/paulsmod/advancement/recipes/misc/lifepreserver.json
 c2908b5cb0339e156b2d8179ae811f049d169f75 data/paulsmod/advancement/recipes/misc/locking_door.json
 3bc362a1abf300a7618e86f7ae762ad44cc48f9f data/paulsmod/advancement/recipes/misc/mixer.json
 ecc14a6e42d5695bad4ed1d2e20d910165e8cd52 data/paulsmod/advancement/recipes/misc/mosaic1_1.json
@@ -116,10 +118,11 @@ b189501ed93712363a9bb7d32653f4f3f8c2c3a0 data/paulsmod/recipe/census.json
 89af0464e4fb0b94856b9ae39772c57f2be18f8c data/paulsmod/recipe/deepslate_pillar2.json
 64528c4bda025c9874fe2df4b861741f510d821d data/paulsmod/recipe/deepslate_pillar3.json
 be5d7bf278ea8e0bf6d5c9d8fe23e1a6683c2ff4 data/paulsmod/recipe/diamond_staff.json
-af07cf8090c94fcede5c512c9241e94cc65bb247 data/paulsmod/recipe/dirt_powder.json
+d79512558cd0d039eabcb2f54ad75aa55bfd3edc data/paulsmod/recipe/dirt_powder.json
 d92a1fc4f16db7fe2d719695fb080915c08a9140 data/paulsmod/recipe/dryer.json
+8a3a7a729cd826dd8ccc6c7f8f38b811c8664882 data/paulsmod/recipe/echo_staff.json
 0a881c644208e1bc4adebb74c497e0d5a168ced3 data/paulsmod/recipe/emerald_staff.json
-ce12fbce4f30365de6af0297e7a559cc3a45465c data/paulsmod/recipe/end_staff.json
+faca6a8dfa13cac2244965be39458673cbc3f69e data/paulsmod/recipe/end_staff.json
 ba982be4ddb1fc54468024cb3f207fcc14cd8698 data/paulsmod/recipe/enderlamp.json
 346e52aef8bb760d83201c0712ce22ee515ac2f4 data/paulsmod/recipe/flour.json
 348bfd6a1d65a8ec64e265c4f8c327359b3d9719 data/paulsmod/recipe/framed_window.json
@@ -139,6 +142,7 @@ a342a5996ea01b3efb01c16ff76c36dea82d3231 data/paulsmod/recipe/lattice_arch.json
 76476d7d8ff21ab3e9a43a380599f2802fea7ea5 data/paulsmod/recipe/lava_core.json
 7f88c2ea23650d35da35c9d99c7c44060162db1b data/paulsmod/recipe/lava_powder.json
 e1f6624460981da2a2ccdd43cb75a0b9e079495e data/paulsmod/recipe/leather_from_rotten_flesh.json
+76aabf1a05967f36aa0c6793b301b4a6188b498a data/paulsmod/recipe/lifepreserver.json
 55d62867ac1f4a860dc118692b718e224fe9f72c data/paulsmod/recipe/locking_door.json
 63a13a3d0abf849d68105976feba3f99ff42e823 data/paulsmod/recipe/mixer.json
 c16d32300e5c0a61d99a3a2dde4f249936321d57 data/paulsmod/recipe/mosaic1_1.json

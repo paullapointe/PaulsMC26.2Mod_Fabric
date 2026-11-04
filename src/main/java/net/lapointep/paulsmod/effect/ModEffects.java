@@ -15,6 +15,7 @@ public class ModEffects {
 
     public static final MobEffect LAPIS_COLA_EFFECT = register("lapis_cola_effect", new LapisColaEffect(MobEffectCategory.HARMFUL, 0xFFFFFF));
     public static final MobEffect TORCH_EFFECT = register("torch_effect", new TorchEffect(MobEffectCategory.BENEFICIAL, 0xFFFF00));
+    public static final MobEffect FEAR = register("fear", new FearEffect(MobEffectCategory.HARMFUL, 0x333333));
 
     public static final MobEffect FREEZE = register("freeze", new FreezeEffect(MobEffectCategory.HARMFUL, 0xDDFFFF));
     public static final MobEffect FLYING = register("flying", new FlyingEffect(MobEffectCategory.BENEFICIAL, 0x88CCFF));

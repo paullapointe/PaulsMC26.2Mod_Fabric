@@ -19,6 +19,9 @@ public class ModMenuTypes {
     public static final MenuType<StoreShelfMenu> STORESHELF_MENU =
             Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "storeshelf_menu"),
                     new ExtendedMenuType<>(StoreShelfMenu::new, BlockPos.STREAM_CODEC));
+    public static final MenuType<DisplayShelfMenu> DISPLAYSHELF_MENU =
+            Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "displayshelf_menu"),
+                    new ExtendedMenuType<>(DisplayShelfMenu::new, BlockPos.STREAM_CODEC));
 
     public static final MenuType<ProcessorMenu> PROCESSOR_MENU =
             Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "processor_menu"),

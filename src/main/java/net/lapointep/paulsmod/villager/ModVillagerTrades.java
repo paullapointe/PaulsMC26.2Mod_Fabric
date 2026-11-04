@@ -35,6 +35,8 @@ public class ModVillagerTrades {
 
     public static final ResourceKey<VillagerTrade> FLORIN_FOR_FISHING_ROOT = createKey("fisherman/1/fishing_rod");
     public static final ResourceKey<VillagerTrade> FLORIN_FOR_FISHING_BOAT = createKey("fisherman/1/boat");
+    public static final ResourceKey<VillagerTrade> FLORIN_FOR_OAK_FISHING_BOAT = createKey("fisherman/1/oak_boat");
+    public static final ResourceKey<VillagerTrade> FLORIN_FOR_SPRUCE_FISHING_BOAT = createKey("fisherman/1/spruce_boat");
 
     public static final ResourceKey<VillagerTrade> FLORIN_FOR_WOOL = createKey("shepherd/1/wool");
 
@@ -119,17 +121,28 @@ public class ModVillagerTrades {
                         8, 1, 0.05f,
                         Optional.empty(), List.of()));
 
+        context.register(FLORIN_FOR_OAK_FISHING_BOAT,
+                new VillagerTrade(new TradeCost(Items.OAK_BOAT, 2),
+                        new ItemStackTemplate(ModItems.FLORIN, 1),
+                        8, 1, 0.05f,
+                        Optional.empty(), List.of()));
+
+        context.register(FLORIN_FOR_SPRUCE_FISHING_BOAT,
+                new VillagerTrade(new TradeCost(Items.OAK_BOAT, 2),
+                        new ItemStackTemplate(ModItems.FLORIN, 1),
+                        8, 1, 0.05f,
+                        Optional.empty(), List.of()));
+
         context.register(FLORIN_FOR_WOOL,
                 new VillagerTrade(new TradeCost(Items.WOOL.white(), 12),
                         new ItemStackTemplate(ModItems.FLORIN, 1),
                         99, 1, 0.05f,
                         Optional.empty(), List.of()));
 
-
         context.register(FLORIN_FOR_ENCHANTED_BOOK, new VillagerTrade(
-                new TradeCost(ModItems.FLORIN, 32),
+                new TradeCost(ModItems.FLORIN, 24),
                 new ItemStackTemplate(Items.ENCHANTED_BOOK),
-                12, 6, 0.05f,
+                99, 2, 0.05f,
                 Optional.empty(),
                 VillagerTrades.enchantedBook(items,
                         HolderSet.direct(enchantments.getOrThrow(ModEnchantments.LIGHTENING),
@@ -141,6 +154,8 @@ public class ModVillagerTrades {
                                 enchantments.getOrThrow(ModEnchantments.HEAL),
                                 enchantments.getOrThrow(ModEnchantments.NOFLAME),
                                 enchantments.getOrThrow(ModEnchantments.TORCH),
+                         //       enchantments.getOrThrow(ModEnchantments.LOCATE),
+                         //       enchantments.getOrThrow(ModEnchantments.TELEPORT),
                                 enchantments.getOrThrow(ModEnchantments.ENFLAME)
                         )
                 )));

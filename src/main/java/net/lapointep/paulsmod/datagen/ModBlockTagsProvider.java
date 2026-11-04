@@ -31,6 +31,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.OSC.builtInRegistryHolder().key())
                 .add(ModBlocks.STICKYNOTE.builtInRegistryHolder().key())
                 .add(ModBlocks.HEARTH.builtInRegistryHolder().key())
+                .add(ModBlocks.LIFEPRESERVER.builtInRegistryHolder().key())
                 .add(ModBlocks.CLOCK.builtInRegistryHolder().key())
                 .add(ModBlocks.ENDERLAMP.builtInRegistryHolder().key())
                 .add(ModBlocks.HEALING.builtInRegistryHolder().key())

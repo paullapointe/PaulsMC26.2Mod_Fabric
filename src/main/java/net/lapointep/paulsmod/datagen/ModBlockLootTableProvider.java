@@ -29,6 +29,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.OSC);
         dropSelf(ModBlocks.STICKYNOTE);
         dropSelf(ModBlocks.HEARTH);
+        dropSelf(ModBlocks.LIFEPRESERVER);
         dropSelf(ModBlocks.CLOCK);
         dropSelf(ModBlocks.ENDERLAMP);
         dropSelf(ModBlocks.HEALING);
@@ -51,6 +52,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.SORTER);
         dropSelf(ModBlocks.BREWER);
         dropSelf(ModBlocks.STORESHELF);
+        dropSelf(ModBlocks.DISPLAYSHELF);
         dropSelf(ModBlocks.CAMO);
 
         add(ModBlocks.RIVER_ROCK, createOreDrop(ModBlocks.RIVER_ROCK, ModItems.RIVER_ROCKS));

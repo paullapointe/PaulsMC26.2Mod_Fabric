@@ -4,8 +4,10 @@ import net.lapointep.paulsmod.access.SpectatorDataHolder;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
 
@@ -24,6 +26,18 @@ public class OneRingItem extends Item {
             toggleGameMode(serverPlayer);
         }
 
+        return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity interactionTarget, InteractionHand hand) {
+        if (player.level().isClientSide()) {
+            return InteractionResult.SUCCESS;
+        }
+
+        interactionTarget.hurt(player.damageSources().playerAttack(player), 5.0f);
+        player.giveExperiencePoints(5);
+        player.heal(5);
         return InteractionResult.SUCCESS;
     }
 

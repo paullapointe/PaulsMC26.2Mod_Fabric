@@ -35,11 +35,11 @@
   "gives": {
     "id": "minecraft:enchanted_book"
   },
-  "max_uses": 12.0,
+  "max_uses": 99.0,
   "reputation_discount": 0.05,
   "wants": {
-    "count": 32.0,
+    "count": 24.0,
     "id": "paulsmod:florin"
   },
-  "xp": 6.0
+  "xp": 2.0
 }

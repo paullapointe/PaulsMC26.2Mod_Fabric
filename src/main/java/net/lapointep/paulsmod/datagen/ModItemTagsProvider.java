@@ -4,11 +4,14 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.lapointep.paulsmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -39,7 +42,16 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(TagKey.create(Registries.ITEM,
                 Identifier.fromNamespaceAndPath("paulsmod", "end_staff")))
+                .add(ModItems.ECHO_STAFF.builtInRegistryHolder().key());
+
+        tag(TagKey.create(Registries.ITEM,
+                Identifier.fromNamespaceAndPath("paulsmod", "end_staff")))
                 .add(ModItems.END_STAFF.builtInRegistryHolder().key());
 
+        tag(ItemTags.SWORDS).add(ModItems.getRK(ModItems.FHAMMER));
+        tag(ItemTags.PICKAXES).add(ModItems.getRK(ModItems.FHAMMER));
+        tag(ItemTags.SHOVELS).add(ModItems.getRK(ModItems.FHAMMER));
+        tag(ItemTags.AXES).add(ModItems.getRK(ModItems.FHAMMER));
+        tag(ItemTags.HOES).add(ModItems.getRK(ModItems.FHAMMER));
     }
 }

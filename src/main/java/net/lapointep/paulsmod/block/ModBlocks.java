@@ -78,6 +78,7 @@ public class ModBlocks {
     public static final Block RIVER_ROCK_MORTAR = registerBlock("river_rock_mortar",properties -> new DropExperienceBlock(UniformInt.of(1, 2), properties.strength(3f).sound(SoundType.STONE)));
 
     public static final Block HEARTH = registerBlock("hearth",properties -> new HearthBlock(properties.strength(4f).noOcclusion().lightLevel(state -> 15)) );
+    public static final Block LIFEPRESERVER = registerBlock("lifepreserver",properties -> new LifePreserverBlock(properties.strength(4f).noOcclusion().lightLevel(state -> 15)) );
     public static final Block CLOCK = registerBlock("clock",properties -> new ClockBlock(properties.strength(4f).noOcclusion().lightLevel(state -> 15)) );
     public static final Block ENDERLAMP = registerBlock("enderlamp",properties -> new EnderLampBlock(properties.strength(4f).noOcclusion().lightLevel(state -> 15)) );
     public static final Block HEALING = registerBlock("healing",properties -> new HealingBlock(properties.strength(4f).noOcclusion().lightLevel(state -> 15)) );
@@ -108,6 +109,7 @@ public class ModBlocks {
     public static final Block SORTER = registerBlock("sorter", properties -> new SorterBlock(properties.strength(4f).noOcclusion()));
     public static final Block BREWER = registerBlock("brewer", properties -> new BrewerBlock(properties.strength(4f).noOcclusion()));
     public static final Block STORESHELF = registerBlock("storeshelf", properties -> new StoreShelfBlock(properties.strength(4f).noOcclusion()));
+    public static final Block DISPLAYSHELF = registerBlock("displayshelf", properties -> new DisplayShelfBlock(properties.strength(4f).noOcclusion()));
     public static final Block CAMO = registerBlock("camo", properties -> new CamoBlock(properties.strength(4f).noOcclusion()));
     public static final Block PRESENT = registerBlock("present", properties -> new PresentBlock(properties.strength(1f).noOcclusion()), false);
 

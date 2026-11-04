@@ -82,7 +82,7 @@ public class BrewerBlockEntity extends BlockEntity implements WorldlyContainer, 
 
     @Override
     public boolean canPlaceItemThroughFace(int slot, ItemStack stack, @Nullable Direction side) {
-        return side != Direction.DOWN && (slot == INPUT_SLOT_1 || slot == INPUT_SLOT_2 || slot == INPUT_SLOT_3);
+        return side != Direction.DOWN && (slot == INPUT_SLOT_1 || slot == INPUT_SLOT_2 || slot == INPUT_SLOT_3) && this.getItem(slot).isEmpty();
     }
 
     @Override
@@ -122,6 +122,11 @@ public class BrewerBlockEntity extends BlockEntity implements WorldlyContainer, 
     @Override
     public ItemStack removeItemNoUpdate(int slot) {
         return ContainerHelper.takeItem(this.items, slot);
+    }
+
+    @Override
+    public int getMaxStackSize() {
+        return 64;
     }
 
     @Override
@@ -196,6 +201,7 @@ public class BrewerBlockEntity extends BlockEntity implements WorldlyContainer, 
 
             // Move bottles from the input to the brewing stand
             if (PaulsCommon.hasThreeEmptyBottleSlots(brewingStand)) {
+                this.balanceInputSlots();
                 if (this.hasThreeFullInputBottleSlots()) {
                     transferBottlesToBrewingStand(brewingStand);
                 }
@@ -245,17 +251,75 @@ public class BrewerBlockEntity extends BlockEntity implements WorldlyContainer, 
 
     public void transferBottlesToBrewingStand(BrewingStandBlockEntity brewingStand) {
         //PaulsMod.LOGGER.info("Transfering bottles to brewing stand");
-        brewingStand.setItem(0, getItem(INPUT_SLOT_1).copy());
-        this.setItem(INPUT_SLOT_1, ItemStack.EMPTY);
+        this.balanceInputSlots();
+        ItemStack stack1 = getItem(INPUT_SLOT_1);
+        ItemStack toTransfer1 = stack1.copy();
+        toTransfer1.setCount(1);
+        brewingStand.setItem(0, toTransfer1);
+        stack1.shrink(1);
 
-        brewingStand.setItem(1, getItem(INPUT_SLOT_2).copy());
-        this.setItem(INPUT_SLOT_2, ItemStack.EMPTY);
+        ItemStack stack2 = getItem(INPUT_SLOT_2);
+        ItemStack toTransfer2 = stack2.copy();
+        toTransfer2.setCount(1);
+        brewingStand.setItem(1, toTransfer2);
+        stack2.shrink(1);
 
-        brewingStand.setItem(2, getItem(INPUT_SLOT_3).copy());
-        this.setItem(INPUT_SLOT_3, ItemStack.EMPTY);
+        ItemStack stack3 = getItem(INPUT_SLOT_3);
+        ItemStack toTransfer3 = stack3.copy();
+        toTransfer3.setCount(1);
+        brewingStand.setItem(2, toTransfer3);
+        stack3.shrink(1);
         
         brewingStand.setChanged();
         this.setChanged();
+    }
+
+    public void balanceInputSlots() {
+        ItemStack stack1 = getItem(INPUT_SLOT_1);
+        ItemStack stack2 = getItem(INPUT_SLOT_2);
+        ItemStack stack3 = getItem(INPUT_SLOT_3);
+
+        int totalCount = 0;
+        ItemStack template = ItemStack.EMPTY;
+
+        if (!stack1.isEmpty()) {
+            totalCount += stack1.getCount();
+            template = stack1;
+        }
+        if (!stack2.isEmpty()) {
+            totalCount += stack2.getCount();
+            if (template.isEmpty()) template = stack2;
+        }
+        if (!stack3.isEmpty()) {
+            totalCount += stack3.getCount();
+            if (template.isEmpty()) template = stack3;
+        }
+
+        if (totalCount == 0) return;
+
+        // Ensure all non-empty stacks are of the same item type before balancing
+        // This is a simple implementation that assumes items in the slots should be the same.
+        if (!stack1.isEmpty() && !ItemStack.isSameItemSameComponents(stack1, template)) return;
+        if (!stack2.isEmpty() && !ItemStack.isSameItemSameComponents(stack2, template)) return;
+        if (!stack3.isEmpty() && !ItemStack.isSameItemSameComponents(stack3, template)) return;
+
+        int avg = totalCount / 3;
+        int remainder = totalCount % 3;
+
+        int count1 = avg + (remainder > 0 ? 1 : 0);
+        int count2 = avg + (remainder > 1 ? 1 : 0);
+        int count3 = avg;
+
+        setItem(INPUT_SLOT_1, createStack(template, count1));
+        setItem(INPUT_SLOT_2, createStack(template, count2));
+        setItem(INPUT_SLOT_3, createStack(template, count3));
+    }
+
+    private ItemStack createStack(ItemStack template, int count) {
+        if (count <= 0) return ItemStack.EMPTY;
+        ItemStack stack = template.copy();
+        stack.setCount(count);
+        return stack;
     }
 
     public void moveBottlesToNextBrewer(BrewerBlockEntity nextBrewer) {

@@ -326,14 +326,14 @@ public class SorterBlockEntity extends BlockEntity implements WorldlyContainer, 
                 itemType = getItemType(stack);
                 positions = itemTypePositions.get(itemType);
                 if (positions == null || positions.isEmpty()) {
-                    PaulsMod.LOGGER.warn("Sorter has no positions for {} {}", stack, itemType);
+                    //PaulsMod.LOGGER.warn("Sorter has no positions for {} {}", stack, itemType);
                     // if no position, just leave this item and move to the next one
                     continue;
                 }
             }
 
             if (positions == null || positions.isEmpty()) {
-                PaulsMod.LOGGER.warn("Sorter has no positions for {} {}/{}", stack, this.items, positions);
+                //PaulsMod.LOGGER.warn("Sorter has no positions for {} {}/{}", stack, this.items, positions);
                 continue;
             }
 
@@ -350,11 +350,11 @@ public class SorterBlockEntity extends BlockEntity implements WorldlyContainer, 
                             //PaulsMod.LOGGER.info("Sorter inserted to {} {}/{}", targetPos, stack, this.items);
                         }
                         else {
-                            PaulsMod.LOGGER.warn("Sorter failed to insert to {} {}/{}", targetPos, stack, this.items);
+                     //       PaulsMod.LOGGER.warn("Sorter failed to insert to {} {}/{}", targetPos, stack, this.items);
                         }
                     }
                     else {
-                        PaulsMod.LOGGER.warn("Sorter target is not a container");
+                   //     PaulsMod.LOGGER.warn("Sorter target is not a container");
                         // Remove the position from the list if it's not a container'
                         if (itemType != null) {
                             addBlockPosForItemType(itemType, targetPos);

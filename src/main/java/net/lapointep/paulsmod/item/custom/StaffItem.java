@@ -15,6 +15,8 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.feline.Cat;
+import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -36,7 +38,7 @@ import static net.lapointep.paulsmod.util.PaulsCommon.getRomanNumeral;
 public class StaffItem extends Item {
 
     public enum StaffType {
-        staff, diamond, emerald, am, end
+        staff, diamond, emerald, am, end, echo
     }
 
     public StaffType staffType;
@@ -61,6 +63,9 @@ public class StaffItem extends Item {
         }
         else if (staffType == StaffType.end) {
             return 0;
+        }
+        else if (staffType == StaffType.echo) {
+            return 1;
         }
 
         return 0;
@@ -152,9 +157,14 @@ public class StaffItem extends Item {
                 // Prevent the player from casting harmful spells on themselves (enflame, lightning, bury, arise)
                 if (isHarmfulSpell(enchantment)) {
                     EntityHitResult hitResult = PaulsCommon.getEntityHitResult(player, 10.0D);
-                    if (hitResult != null && hitResult.getEntity() == player) {
-                        player.sendSystemMessage(Component.translatable("Cannot cast this spell on yourself"));
-                        return InteractionResult.SUCCESS;
+                    if (hitResult != null) {
+                        Entity entity = hitResult.getEntity();
+                        if ((entity == player) || (entity instanceof Villager) || (entity instanceof Cat)) {
+                            player.sendSystemMessage(Component.translatable("Forbiden!"));
+                            damageStaff(staff, player);
+                            damageStaff(staff, player);
+                            return InteractionResult.SUCCESS;
+                        }
                     }
                 }
 

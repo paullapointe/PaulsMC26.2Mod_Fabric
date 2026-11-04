@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "group": "potions",
   "ingredients": [
-    "paulsmod:staff",
+    "paulsmod:echo_staff",
     "minecraft:end_crystal"
   ],
   "result": {

@@ -62,6 +62,12 @@ public class PaulsCommon {
     // --- 1. Chat & Messaging ---
     public static final Queue<PendingChatMessage> PendingChatMessages = new ConcurrentLinkedQueue<>();
 
+    public static Vec3 GetDirectionToTarget(Player player, BlockPos pos) {
+        Vec3 playerPos = player.position();
+        Vec3 targetPos = Vec3.atCenterOf(pos);
+        return targetPos.subtract(playerPos).normalize();
+    }
+
     public record PendingChatMessage(ServerPlayer player, String message) {}
 
     public static void receiveChatMessage(ServerPlayer player, String message) {
@@ -70,8 +76,6 @@ public class PaulsCommon {
         PaulsMod.LOGGER.info("Messages received: " + PendingChatMessages.size());
 
     }
-
-
 
     // --- 2. World & Block Manipulation ---
 
@@ -1017,6 +1021,7 @@ public class PaulsCommon {
                 stack.is(Items.CLAY) ||
                 stack.is(Items.CALCITE) ||
                 stack.is(Items.GLASS) ||
+                stack.is(Items.MAGMA_BLOCK) ||
                 stack.is(ConventionalItemTags.GLASS_BLOCKS) ||
                 stack.is(ConventionalItemTags.GLASS_PANES) ||
                 stack.is(ConventionalItemTags.GLASS_PANES_COLORLESS) ||

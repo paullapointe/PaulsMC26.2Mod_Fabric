@@ -24,6 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.ALTER);
         // BREWER blockstate is manually defined in resources/assets/paulsmod/blockstates/brewer.json
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.STORESHELF);
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.DISPLAYSHELF);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.SEEING_POOL);
         //blockModelGenerators.createNonTemplateModelBlock(ModBlocks.HOOK);
         blockModelGenerators.createTrivialCube(ModBlocks.SPAWNER);
@@ -90,13 +91,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.RIVER_ROCKS, ModelTemplates.FLAT_ITEM);
 
         // Items
-        itemModelGenerators.generateFlatItem(ModItems.ONE_RING, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.DWARVEN_RING, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.STAFF, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.AM_STAFF, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.DI_STAFF, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.EM_STAFF, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.END_STAFF, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.FHAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ONE_RING, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ELVEN_RING, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.DWARVEN_RING, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STAFF, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.AM_STAFF, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.DI_STAFF, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.EM_STAFF, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.END_STAFF, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ECHO_STAFF, ModelTemplates.FLAT_HANDHELD_ITEM);
 
         itemModelGenerators.generateFlatItem(ModItems.WRENCH, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BANDAGE, ModelTemplates.FLAT_ITEM);
@@ -110,6 +114,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.LAVA_POWDER, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.NETHER_POWDER, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.SCULK_POWDER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.WATER_POWDER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STONE_POWDER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.DIRT_POWDER, ModelTemplates.FLAT_ITEM);
+
         itemModelGenerators.generateFlatItem(ModItems.FLOUR, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.WAFFLE_MIX, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.TELEPORTER_ARROW, ModelTemplates.FLAT_ITEM);

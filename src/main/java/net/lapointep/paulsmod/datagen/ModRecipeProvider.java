@@ -60,8 +60,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("potions").save(output);
 
                 shapeless(RecipeCategory.MISC, ModItems.END_STAFF, 1)
-                        .requires(ModItems.STAFF,1)
+                        .requires(ModItems.ECHO_STAFF,1)
                         .requires(Items.END_CRYSTAL,1)
+                        .unlockedBy(getHasName(ModItems.STAFF), has(ModItems.STAFF))
+                        .group("potions").save(output);
+
+                shapeless(RecipeCategory.MISC, ModItems.ECHO_STAFF, 1)
+                        .requires(ModItems.AM_STAFF,1)
+                        .requires(Items.ECHO_SHARD,1)
                         .unlockedBy(getHasName(ModItems.STAFF), has(ModItems.STAFF))
                         .group("potions").save(output);
 
@@ -108,7 +114,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 shapeless(RecipeCategory.MISC, ModItems.DIRT_POWDER, 2)
                         .requires(ModItems.UNSTABLE_POWDER,1)
-                        .requires(Blocks.STONE,1)
+                        .requires(Blocks.DIRT,1)
                         .unlockedBy(getHasName(ModItems.UNSTABLE_POWDER), has(ModItems.UNSTABLE_POWDER))
                         .group("potions").save(output);
 
@@ -214,16 +220,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.MIXER), has(ModBlocks.MIXER))
                         .group("tools").save(output);
 
+                shapeless(RecipeCategory.MISC, ModBlocks.STORESHELF, 1)
+                        .requires(ModBlocks.DISPLAYSHELF,1)
+                        .requires(ModItems.FLORIN,1)
+                        .unlockedBy(getHasName(ModBlocks.STORESHELF), has(ModBlocks.STORESHELF))
+                        .group("tools").save(output);
+
                 shapeless(RecipeCategory.MISC, ModBlocks.BREWER, 1)
-                        .requires(ModBlocks.STORESHELF,1)
+                        .requires(ModBlocks.DISPLAYSHELF,1)
                         .requires(Blocks.COMPARATOR,1)
-                        .unlockedBy(getHasName(ModBlocks.MIXER), has(ModBlocks.MIXER))
+                        .unlockedBy(getHasName(ModBlocks.STORESHELF), has(ModBlocks.STORESHELF))
                         .group("tools").save(output);
 
                 shapeless(RecipeCategory.MISC, ModBlocks.CENSUS, 1)
                         .requires(Blocks.POLISHED_DIORITE,1)
                         .requires(Blocks.CAMPFIRE,1)
                         .unlockedBy(getHasName(Blocks.POLISHED_DIORITE), has(Blocks.POLISHED_DIORITE))
+                        .group("tools").save(output);
+
+                shapeless(RecipeCategory.MISC, ModBlocks.LIFEPRESERVER, 1).requires(Items.WOOL.white(),2)
+                        .requires(Items.WOOL.red(),2)
+                        .requires(Items.ENDER_PEARL,1)
+                        .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
                         .group("tools").save(output);
 
                 shapeless(RecipeCategory.MISC, ModBlocks.HEARTH, 1)

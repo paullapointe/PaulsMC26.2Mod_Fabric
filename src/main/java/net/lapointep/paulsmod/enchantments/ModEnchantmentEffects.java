@@ -14,6 +14,7 @@ public class ModEnchantmentEffects {
     public static final MapCodec<DawnEnchantmentEffect> DAWN_EFFECT = register("dawn_effect", DawnEnchantmentEffect.CODEC);
     public static final MapCodec<AriseEnchantmentEffect> ARISE_EFFECT = register("arise_effect", AriseEnchantmentEffect.CODEC);
     public static final MapCodec<FreezeEnchantmentEffect> FREEZE_EFFECT = register("freeze_effect", FreezeEnchantmentEffect.CODEC);
+    public static final MapCodec<FearEnchantmentEffect> FEAR_EFFECT = register("fear_effect", FearEnchantmentEffect.CODEC);
 
     public static final MapCodec<HealEnchantmentEffect> HEALING_EFFECT = register("heal_effect",HealEnchantmentEffect.CODEC);
     public static final MapCodec<BreadEnchantmentEffect> BREAD_EFFECT = register("bread_effect",BreadEnchantmentEffect.CODEC);

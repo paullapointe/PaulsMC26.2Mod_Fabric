@@ -120,14 +120,24 @@ public class ModVillagerTradeTags extends FabricTagsProvider<VillagerTrade> {
                 .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_FISHING_ROOT.identifier()));
 
         getOrCreateRawBuilder(VillagerTradeTags.FISHERMAN_LEVEL_1)
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_OAK_FISHING_BOAT.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_SPRUCE_FISHING_BOAT.identifier()))
                 .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_FISHING_BOAT.identifier()));
         getOrCreateRawBuilder(VillagerTradeTags.FISHERMAN_LEVEL_2)
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_OAK_FISHING_BOAT.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_SPRUCE_FISHING_BOAT.identifier()))
                 .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_FISHING_BOAT.identifier()));
         getOrCreateRawBuilder(VillagerTradeTags.FISHERMAN_LEVEL_3)
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_OAK_FISHING_BOAT.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_SPRUCE_FISHING_BOAT.identifier()))
                 .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_FISHING_BOAT.identifier()));
         getOrCreateRawBuilder(VillagerTradeTags.FISHERMAN_LEVEL_4)
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_OAK_FISHING_BOAT.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_SPRUCE_FISHING_BOAT.identifier()))
                 .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_FISHING_BOAT.identifier()));
         getOrCreateRawBuilder(VillagerTradeTags.FISHERMAN_LEVEL_5)
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_OAK_FISHING_BOAT.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_SPRUCE_FISHING_BOAT.identifier()))
                 .add(TagEntry.element(ModVillagerTrades.FLORIN_FOR_FISHING_BOAT.identifier()));
 
     }

@@ -28,6 +28,9 @@ public class ModEnchantmentTagsProvider extends EnchantmentTagsProvider {
                 .add(ModEnchantments.HEAL)
                 .add(ModEnchantments.BREAD)
                 .add(ModEnchantments.TORCH)
-                .add(ModEnchantments.NOFLAME);
+              //  .add(ModEnchantments.LOCATE)
+              //  .add(ModEnchantments.TELEPORT)
+                .add(ModEnchantments.NOFLAME)
+                .add(ModEnchantments.FEAR);
     }
 }

@@ -1,5 +1,6 @@
 package net.lapointep.paulsmod.item;
 
+import com.mojang.datafixers.util.Unit;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.lapointep.paulsmod.PaulsMod;
 import net.lapointep.paulsmod.block.ModBlocks;
@@ -18,15 +19,14 @@ import net.lapointep.paulsmod.item.custom.*;
     // TODO: Verify registration for TravelingStoneItem with texture travelling_stone.png
     // TODO: Verify registration for TempPadItem with texture temp_pad.png
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
 
 import java.util.function.Function;
@@ -53,10 +53,14 @@ public class ModItems {
     public static final Item EM_STAFF = registerItem("emerald_staff", properties->new StaffItem(StaffItem.StaffType.emerald, properties.durability(32).stacksTo(1)));
     public static final Item AM_STAFF = registerItem("am_staff", properties->new StaffItem(StaffItem.StaffType.am, properties.durability(64).stacksTo(1)));
     public static final Item END_STAFF = registerItem("end_staff", properties->new StaffItem(StaffItem.StaffType.end, properties.durability(256).stacksTo(1)));
+    public static final Item ECHO_STAFF = registerItem("echo_staff", properties->new StaffItem(StaffItem.StaffType.echo, properties.durability(256).stacksTo(1)));
 
     public static final Item WRENCH = registerItem("wrench", WrenchItem::new);
     public static final Item ONE_RING = registerItem("one_ring", OneRingItem::new);
     public static final Item DWARVEN_RING = registerItem("dwarven_ring", DwarvenRingItem::new);
+    public static final Item ELVEN_RING = registerItem("elven_ring", ElvenRingItem::new);
+    public static final Item FHAMMER = registerItem("fhammer", properties->new FHammerItem(
+            properties.stacksTo(2).pickaxe(ToolMaterial.NETHERITE, 4.0F, -2.8F)));
 
     public static final Item COPPER_POWDER = registerItem("copper_powder",Item::new);
     public static final Item IRON_POWDER = registerItem("iron_powder", Item::new);
@@ -106,6 +110,7 @@ public class ModItems {
             output.accept(END_STAFF);
             output.accept(ONE_RING);
             output.accept(DWARVEN_RING);
+            output.accept(ELVEN_RING);
 
             output.accept(WRENCH);
             output.accept(BANDAGE);
@@ -135,5 +140,9 @@ public class ModItems {
             output.accept(CAMO);
             output.accept(ModBlocks.LAVA_CORE);
         });
+    }
+
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
     }
 }

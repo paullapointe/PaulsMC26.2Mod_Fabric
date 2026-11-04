@@ -56,10 +56,11 @@ public class Destination {
     }
     */
 
-    public Vec3 getDirectionToTarget(Player player) {
-        Vec3 startPos = player.getEyePosition();
-        Vec3 targetVec = Vec3.atCenterOf(pos);
-        return targetVec.subtract(startPos).normalize();
+    public Vec3 getDirectionToTarget(ServerPlayer player) {
+       // Vec3 startPos = player.getEyePosition();
+      //  Vec3 targetVec = Vec3.atCenterOf(pos);
+        //return targetVec.subtract(startPos).normalize();
+        return PaulsCommon.GetDirectionToTarget(player, pos);
     }
 
     public void teleport(Entity entity) {

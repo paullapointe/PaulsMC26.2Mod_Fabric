@@ -16,6 +16,7 @@
   "item.paulsmod.emerald_staff": "Emerald Staff",
   "item.paulsmod.diamond_staff": "Diamond Staff",
   "item.paulsmod.end_staff": "End Staff",
+  "item.paulsmod.echo_staff": "Echo Shard Staff",
   "item.paulsmod.scrambled_eggs": "Scrambled Eggs",
   "item.paulsmod.wrapping_paper": "Wrapping Paper",
   "item.paulsmod.present": "Present",
@@ -25,6 +26,8 @@
   "item.paulsmod.bandage": "Bandage",
   "item.paulsmod.one_ring": "One Ring",
   "item.paulsmod.dwarven_ring": "Dwarven Ring",
+  "item.paulsmod.elven_ring": "Elven Ring",
+  "item.paulsmod.fhammer": "Faenor's Hammer",
   "item.paulsmod.copper_powder": "Copper Powder",
   "item.paulsmod.iron_powder": "Iron Powder",
   "item.paulsmod.unstable_powder": "Unstable Powder",
@@ -63,6 +66,7 @@
   "item.paulsmod.hook": "Hook",
   "item.paulsmod.alter": "Altar",
   "item.paulsmod.lattice_arch": "Lattice Arch",
+  "item.paulsmod.display_shelf": "Shelf",
   "item.paulsmod.store_shelf": "Store Shelf",
   "item.paulsmods.helper": "Helper",
   "items.paulsmod.receiver": "Receiver",
@@ -127,6 +131,7 @@
   "block.paulsmod.round_framed_window": "Round Framed Window",
   "block.paulsmod.lattice_arch": "Lattice Arch",
   "block.paulsmod.storeshelf": "Store Shelf",
+  "block.paulsmod.displayshelf": "Shelf",
   "block.paulsmod.camo_block": "",
   "block.paulsmod.river_rock_mortar": "River Rock and Mortar",
   "block.paulsmod.river_rock": "River Rock",
@@ -197,6 +202,7 @@
   "item.paulsmod.spawner": "Spawner",
   "item.paulsmod.fueler": "Fueler",
 
+  "item.minecraft.splash_potion.effect.sugar_water": "Sugar Water",
   "item.minecraft.splash_potion.effect.netherrack_potion": "Netherrack Potion",
   "item.minecraft.splash_potion.effect.lava_potion": "Lava Potion",
   "item.minecraft.splash_potion.effect.water_potion": "Water Potion",
@@ -221,6 +227,7 @@
   "item.minecraft.lingering_potion.effect.glue_potion": "Glue Potion",
   "effect.paulsmod.lapis_cola_effect": "Love the experience!",
   "effect.paulsmod.torch_effect": "Torch",
+  "effect.paulsmod.fear": "Fear",
 
   "enchantment.paulsmod.enflame_effect": "Inflammatio",
   "enchantment.paulsmod.lightening_effect": "Fulgur",
@@ -231,6 +238,7 @@
   "enchantment.paulsmod.bread_effect": "Mana dabis",
   "enchantment.paulsmod.torch_effect": "Fax magica",
   "enchantment.paulsmod.heal_effect": "Cura amicum",
-  "enchantment.paulsmod.noflame_effect": "Extingue"
+  "enchantment.paulsmod.noflame_effect": "Extingue",
+  "enchantment.paulsmod.fear": "Timor"
 
 }

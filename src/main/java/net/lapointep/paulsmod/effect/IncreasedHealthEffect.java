@@ -10,6 +10,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 public class IncreasedHealthEffect extends MobEffect {
     public IncreasedHealthEffect(MobEffectCategory category, int color) {
         super(category, color);
-        this.addAttributeModifier(Attributes.MAX_HEALTH, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "increased_health"), 16.0, AttributeModifier.Operation.ADD_VALUE);
+        this.addAttributeModifier(Attributes.MAX_HEALTH, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "increased_health"), 20.0, AttributeModifier.Operation.ADD_VALUE);
     }
 }

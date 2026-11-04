@@ -17,6 +17,7 @@ f5bb85f82d0ffd20864134aa99ddad30201aedfa data/paulsmod/loot_table/blocks/big_ds_
 4104eab7990532ae5dd03fbf56b4d1a613f41b69 data/paulsmod/loot_table/blocks/deepslate_pillar1.json
 2760ed02afb8130ba78d16b98a39da7cc257ad18 data/paulsmod/loot_table/blocks/deepslate_pillar2.json
 4f51cb96c8cf296d14e25b28f905b28e3011070a data/paulsmod/loot_table/blocks/deepslate_pillar3.json
+93ea9e657b5405a432effabf20d4dcf6bf8a93e4 data/paulsmod/loot_table/blocks/displayshelf.json
 e2825cbd2470ce331283da1c88611f128c2bf8b5 data/paulsmod/loot_table/blocks/dryer.json
 61643bc8e9cb78087fc6717ba515c3b9820ac394 data/paulsmod/loot_table/blocks/enderlamp.json
 1c6902f372f48712d9435940b883cedb421a1906 data/paulsmod/loot_table/blocks/framed_window.json
@@ -31,6 +32,7 @@ c567af0fc8affc8e743ef53226905e807473d4ba data/paulsmod/loot_table/blocks/hearth.
 0f9594614299adf7f412689237d32a035d405a44 data/paulsmod/loot_table/blocks/hook.json
 563ed00227172d6f8b13ffac6b4a7c991281fd41 data/paulsmod/loot_table/blocks/lattice_arch.json
 c061c522e514a203ebb46c856631678d59d50195 data/paulsmod/loot_table/blocks/lava_core.json
+edcb28c86e50a88caf260e60240ffc3c2e0f355a data/paulsmod/loot_table/blocks/lifepreserver.json
 9d591399537424280f01fdae80fbd6ca4223c5e8 data/paulsmod/loot_table/blocks/locking_door.json
 ee02c2cea344c138cbed8d7e133b1bc78dd1a068 data/paulsmod/loot_table/blocks/mixer.json
 52021590b3e2692ddcddf9938e906514f999e0aa data/paulsmod/loot_table/blocks/mosaic1_1.json

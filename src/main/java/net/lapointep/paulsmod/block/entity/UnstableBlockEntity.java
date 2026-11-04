@@ -124,7 +124,13 @@ public class UnstableBlockEntity extends BlockEntity implements BlockWithCyclabl
                 }
             }
             else if (blockType == ModBlockEntities.UNSTABLESTONE) {
-                if (neighborState.is(Blocks.STONE)) {
+                if (
+                        (neighborState.is(Blocks.STONE)) ||
+                                (neighborState.is(Blocks.COBBLESTONE)) ||
+                                        (neighborState.is(Blocks.DEEPSLATE)) ||
+                                                (neighborState.is(Blocks.TUFF)) ||
+                                                        (neighborState.is(Blocks.LAVA)))
+                 {
                     level.setBlock(neighborPos, ModBlocks.UNSTABLESTONE.defaultBlockState(), 3);
                     BlockEntity neighborBlockEntity = level.getBlockEntity(neighborPos);
                     if (neighborBlockEntity instanceof UnstableBlockEntity unstableBlockEntity) {

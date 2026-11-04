@@ -3,7 +3,7 @@
   "group": "potions",
   "ingredients": [
     "paulsmod:unstable_powder",
-    "minecraft:stone"
+    "minecraft:dirt"
   ],
   "result": {
     "count": 2,

@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AM_STAFF);
                         output.accept(ModItems.DI_STAFF);
                         output.accept(ModItems.EM_STAFF);
+                        output.accept(ModItems.ECHO_STAFF);
                         output.accept(ModItems.END_STAFF);
                         output.accept(ModBlocks.SEEING_POOL);
                     }).build());
@@ -57,6 +58,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STAIN_GLASS);
                         output.accept(ModBlocks.CENSUS);
                         output.accept(ModBlocks.HEARTH);
+                        output.accept(ModBlocks.LIFEPRESERVER);
                         output.accept(ModBlocks.CLOCK);
 
                         output.accept(ModBlocks.ENDERLAMP);
@@ -78,6 +80,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SORTER);
                         output.accept(ModBlocks.BREWER);
                         output.accept(ModBlocks.STORESHELF);
+                        output.accept(ModBlocks.DISPLAYSHELF);
                         output.accept(ModBlocks.BARRIER);
                     }).build());
 

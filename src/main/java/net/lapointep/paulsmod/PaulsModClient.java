@@ -31,6 +31,7 @@ public class PaulsModClient implements ClientModInitializer {
         MenuScreens.register(ModMenuTypes.SORTER_MENU, SorterScreen::new);
         MenuScreens.register(ModMenuTypes.BREWER_MENU, BrewerScreen::new);
         MenuScreens.register(ModMenuTypes.STORESHELF_MENU, StoreShelfScreen::new);
+        MenuScreens.register(ModMenuTypes.DISPLAYSHELF_MENU, DisplayShelfScreen::new);
         MenuScreens.register(ModMenuTypes.PROCESSOR_MENU, ProcessorScreen::new);
         MenuScreens.register(ModMenuTypes.ATM_MENU, ATMScreen::new);
 
@@ -57,6 +58,7 @@ public class PaulsModClient implements ClientModInitializer {
         BlockEntityRenderers.register(ModBlockEntities.STICKYNOTE, StickyNoteBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.BREWER, BrewerBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.STORESHELF, StoreShelfBlockEntityRenderer::new);
+        BlockEntityRenderers.register(ModBlockEntities.DISPLAYSHELF, DisplayShelfBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.CAMO, CamoBlockEntityRenderer::new);
 
         // Other client-specific initialization
