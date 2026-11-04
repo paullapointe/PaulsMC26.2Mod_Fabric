@@ -1,0 +1,37 @@
+{
+  "description": {
+    "translate": "enchantment.paulsmod.teleport_effect"
+  },
+    "supported_items": [
+    "paulsmod:diamond_staff",	
+    "paulsmod:emerald_staff",
+    "paulsmod:am_staff",
+    "paulsmod:end_staff"
+  ],
+  "weight": 10,
+  "max_level": 3,
+  "min_cost": {
+    "base": 2,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "paulsmod:teleport_effect",
+          "amount": 0
+        }
+      }
+    ]
+  }
+}
