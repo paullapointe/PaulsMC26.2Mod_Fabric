@@ -136,7 +136,7 @@ public class SeeingPoolBlockEntity extends BlockEntity implements ContainerSingl
             isWaiting = WAITING_SECONDS;
         }
 
-        PaulsMod.LOGGER.info("Energy: {} State: {}", energy, state.getValue(SeeingPoolBlock.STATE));
+       // PaulsMod.LOGGER.info("Energy: {} State: {}", energy, state.getValue(SeeingPoolBlock.STATE));
     }
 
     @Override

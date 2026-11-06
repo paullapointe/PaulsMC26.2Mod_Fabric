@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "paulsmod:block/builder_top",
+    "south": "paulsmod:block/builder_bottom",
+    "up": "paulsmod:block/builder_side1",
+    "down": "paulsmod:block/builder_side2",
+    "east": "paulsmod:block/builder_side3",
+    "west": "paulsmod:block/builder_side4"
+  }
+}

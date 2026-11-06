@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "paulsmod:block/builder" },
+    "facing=south": { "model": "paulsmod:block/builder", "y": 180 },
+    "facing=west": { "model": "paulsmod:block/builder", "y": 270 },
+    "facing=east": { "model": "paulsmod:block/builder", "y": 90 },
+    "facing=up": { "model": "paulsmod:block/builder", "x": -90 },
+    "facing=down": { "model": "paulsmod:block/builder", "x": 90 }
+  }
+}
