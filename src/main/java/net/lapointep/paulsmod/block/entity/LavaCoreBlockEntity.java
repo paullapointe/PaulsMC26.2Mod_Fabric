@@ -16,30 +16,34 @@ public class LavaCoreBlockEntity extends ProcessorBlockEntity {
     }
 
     public boolean isCrafting() {
-        //PaulsMod.LOGGER.info("LavaCore isCrafting!");
         ItemStack inputStack = this.getItem(INPUT_SLOT);
         if (inputStack.isEmpty()) {
             return false;
         }
-
+        //PaulsMod.LOGGER.info("LavaCore isCrafting!");
         if (inputStack.getItem() == Items.BUCKET) {
             this.setOutputItem(Items.LAVA_BUCKET);
-            this.increaseCraftingProgress();
+            //PaulsMod.LOGGER.info("LavaCore isCrafting! Output is Lava Bucket");
+        }
+        else if (inputStack.getItem() == Items.ANDESITE) {
+            this.setOutputItem(Items.MAGMA_BLOCK);
+            //PaulsMod.LOGGER.info("LavaCore isCrafting! Output is Magma Block");
+        }
+        else if (inputStack.getItem() == Items.GRANITE) {
+            this.setOutputItem(Items.BLACKSTONE);
+            //PaulsMod.LOGGER.info("LavaCore isCrafting! Output is Blackstone");
+        }
+        else {
+            return false;
         }
 
-        int waterCount = PaulsCommon.countAdjacentLava(this.level, this.worldPosition);
-        if (waterCount >= 1) {
-            //PaulsMod.LOGGER.info("Found lava in adjacent blocks");
+        int lavaCount = PaulsCommon.countAdjacentLava(this.level, this.worldPosition);
+        if (lavaCount >= 1) {
+            this.increaseCraftingProgress();
             return true;
         }
-        //PaulsMod.LOGGER.info("No lava!");
         return false;
     }
-
-    public ItemStack getOutputItem() {
-        return new ItemStack(Items.LAVA_BUCKET);
-    }
-
 
     @Override
     public Component getName() {

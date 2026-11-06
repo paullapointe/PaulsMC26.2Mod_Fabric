@@ -54,6 +54,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.STORESHELF);
         dropSelf(ModBlocks.DISPLAYSHELF);
         dropSelf(ModBlocks.CAMO);
+        dropSelf(ModBlocks.BUILDER);
 
         add(ModBlocks.RIVER_ROCK, createOreDrop(ModBlocks.RIVER_ROCK, ModItems.RIVER_ROCKS));
         dropSelf(ModBlocks.RIVER_ROCK_MORTAR);

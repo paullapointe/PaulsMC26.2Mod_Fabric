@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.paulsmod.pauls_mods_magic"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.ONE_RING);
+                        output.accept(ModItems.ELVEN_RING);
                         output.accept(ModItems.DWARVEN_RING);
                         output.accept(ModItems.STAFF);
                         output.accept(ModItems.AM_STAFF);
@@ -82,6 +83,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STORESHELF);
                         output.accept(ModBlocks.DISPLAYSHELF);
                         output.accept(ModBlocks.BARRIER);
+
+                        output.accept(ModBlocks.BUILDER);
                     }).build());
 
     public static final CreativeModeTab PAULSMOD_TAB3 = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
@@ -165,8 +168,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RIVER_ROCK);
                         output.accept(ModItems.RIVER_ROCKS);
                         output.accept(ModBlocks.RIVER_ROCK_MORTAR);
-
-
 
                     }).build());
 

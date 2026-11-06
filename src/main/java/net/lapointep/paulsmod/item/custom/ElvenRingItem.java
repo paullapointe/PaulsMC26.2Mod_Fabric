@@ -25,29 +25,13 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ElvenRingItem extends Item {
+public class ElvenRingItem extends DwarvenRingItem {
     private static final Identifier HEALTH_MODIFIER_ID = Identifier.fromNamespaceAndPath("paulsmod", "elven_ring_health");
 
     public ElvenRingItem(Properties properties) {
         super(properties);
     }
     public TargetType currentTarget = TargetType.IRON;
-
-    public enum TargetType {
-        IRON,
-        DIAMOND,
-        EMERALD,
-        AMETHYST,
-        ANCIENT_DEBRIS,
-        SEEING_POOL;
-
-        // Cache values() to avoid allocating a new array on every call
-        private static final TargetType[] VALUES = values();
-
-        public TargetType next() {
-            return VALUES[(this.ordinal() + 1) % VALUES.length];
-        }
-    }
 
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
@@ -64,74 +48,17 @@ public class ElvenRingItem extends Item {
                 if (healthAttribute != null && healthAttribute.getModifier(HEALTH_MODIFIER_ID) == null) {
                     healthAttribute.addPermanentModifier(new AttributeModifier(HEALTH_MODIFIER_ID, 20.0, AttributeModifier.Operation.ADD_VALUE));
                     serverPlayer.setHealth(serverPlayer.getMaxHealth()); // Heal to new max
-                    
+
                     // Increase rate of healing by 50%
                     // Applying a permanent healing effect (amplifier 0).
                     serverPlayer.addEffect(new MobEffectInstance(net.minecraft.core.registries.BuiltInRegistries.MOB_EFFECT.wrapAsHolder(ModEffects.HEALING), -1, 0, false, false, true));
-                    
                     serverPlayer.sendSystemMessage(Component.literal("The Elven Ring pulses with ancient energy, granting you increased health and vitality!"));
                     level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BEACON_ACTIVATE, SoundSource.PLAYERS, 1.0f, 1.0f);
                 }
-
-                if (player.isShiftKeyDown()) {
-                    currentTarget = currentTarget.next();
-                    player.sendSystemMessage(Component.literal("Looking for " + currentTarget + "s"));
-                    return InteractionResult.SUCCESS;
-                }
-
-                ItemStack offhandItem = player.getOffhandItem();
-                if (offhandItem.is(ModItems.GUIDE_STONE))
-                {
-                    BlockPos pos = findClosestBlock(level, serverPlayer.blockPosition(), currentTarget,10);
-
-                    if (pos == null) {
-                        BlockPos targetPos = serverPlayer.blockPosition();
-                        serverLevel.sendParticles(ParticleTypes.PORTAL, targetPos.getX(), targetPos.getY(), targetPos.getZ(), 32, 0.5, 0.5, 0.5, 0.1);
-                        level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.AMETHYST_BLOCK_STEP, SoundSource.BLOCKS, 1.0f, 1.0f);
-
-                        return InteractionResult.SUCCESS;
-                    }
-
-                    GuideStoneItem guideStone = (GuideStoneItem) offhandItem.getItem();
-                    guideStone.saveDestination(offhandItem, pos, level.dimension(), player);
-                }
             }
         }
 
-
-        return InteractionResult.SUCCESS;
+        return super.use(level, player, hand);
     }
 
-    public static BlockPos findClosestBlock(LevelReader level, BlockPos center, TargetType targetType, int radius) {
-        BlockPos closestPos = null;
-        // Define the corners of the search cube
-        BlockPos minPos = center.offset(-radius, -radius, -radius);
-        BlockPos maxPos = center.offset(radius, radius, radius);
-
-        // betweenClosed is highly optimized but reuses a single mutable BlockPos object
-        for (BlockPos currentPos : BlockPos.betweenClosed(minPos, maxPos)) {
-            BlockState state = level.getBlockState(currentPos);
-
-            if ((targetType == TargetType.ANCIENT_DEBRIS) && (state.is(Blocks.ANCIENT_DEBRIS))) {
-                closestPos = currentPos.immutable();
-            }
-            else if ((targetType == TargetType.DIAMOND) && (state.is(Blocks.DIAMOND_ORE) || state.is(Blocks.DEEPSLATE_DIAMOND_ORE))) {
-                closestPos = currentPos.immutable();
-            }
-            else if ((targetType == TargetType.EMERALD) && (state.is(Blocks.EMERALD_ORE))) {
-                closestPos = currentPos.immutable();
-            }
-            else if ((targetType == TargetType.AMETHYST) && (state.is(Blocks.AMETHYST_BLOCK))) {
-                closestPos = currentPos.immutable();
-            }
-            else if ((targetType == TargetType.SEEING_POOL) && (state.is(ModBlocks.SEEING_POOL))) {
-                closestPos = currentPos.immutable();
-            }
-            else if ((targetType == TargetType.IRON) && ((state.is(Blocks.IRON_ORE))|| (state.is(Blocks.DEEPSLATE_IRON_ORE)))) {
-                closestPos = currentPos.immutable();
-            }
-        }
-        return closestPos;
-
-    }
 }

@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "state=0": { "model": "paulsmod:block/census0" },
-    "state=1": { "model": "paulsmod:block/census1" }
-  }
-}

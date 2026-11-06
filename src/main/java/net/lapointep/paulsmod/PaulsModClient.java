@@ -33,6 +33,7 @@ public class PaulsModClient implements ClientModInitializer {
         MenuScreens.register(ModMenuTypes.STORESHELF_MENU, StoreShelfScreen::new);
         MenuScreens.register(ModMenuTypes.DISPLAYSHELF_MENU, DisplayShelfScreen::new);
         MenuScreens.register(ModMenuTypes.PROCESSOR_MENU, ProcessorScreen::new);
+        MenuScreens.register(ModMenuTypes.BUILDER_MENU, BuilderScreen::new);
         MenuScreens.register(ModMenuTypes.ATM_MENU, ATMScreen::new);
 
         ClientPlayNetworking.registerGlobalReceiver(ModMessages.OpenCensusScreenPayload.TYPE, (payload, context) -> {

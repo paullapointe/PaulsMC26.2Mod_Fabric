@@ -10,6 +10,8 @@ import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
 import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.lapointep.paulsmod.PaulsMod;
+import net.lapointep.paulsmod.entity.GuideEntity;
+import net.lapointep.paulsmod.entity.ModEntities;
 import net.lapointep.paulsmod.item.ModItems;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -1109,5 +1111,31 @@ public class PaulsCommon {
     public static String getRomanNumeral(int number) {
         String[] romanNumerals = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"};
         return romanNumerals[number - 1];
+    }
+
+    static public void showTheWay(ServerLevel serverLevel, ServerPlayer serverPlayer, BlockPos pos) {
+
+        // Create and position entity at player eye height
+        GuideEntity guide = ModEntities.GUIDE_ENTITY.create(serverLevel, EntitySpawnReason.TRIGGERED);
+        if (guide != null) {
+            PaulsMod.LOGGER.info("Creating guide entity at " + pos);
+            Vec3 spawnPos = serverPlayer.getEyePosition().add(serverPlayer.getLookAngle().scale(0.5));
+
+            // Set position and rotation using explicit Mojang mapping setters
+            guide.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
+            guide.setYRot(serverPlayer.getYRot());
+            guide.setXRot(serverPlayer.getXRot());
+
+            // Sync old position and rotation to prevent client-side interpolation glitches from (0,0,0)
+            guide.setOldPosAndRot();
+
+            Vec3 direction = GetDirectionToTarget(serverPlayer, pos);
+            guide.setGuideDirection(direction, 0.2); // 0.2 blocks/tick speed
+            serverLevel.addFreshEntity(guide);
+        }
+        else {
+            PaulsMod.LOGGER.error("Guide entity is null");
+        }
+
     }
 }

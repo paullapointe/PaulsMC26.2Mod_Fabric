@@ -26,6 +26,9 @@ public class ModMenuTypes {
     public static final MenuType<ProcessorMenu> PROCESSOR_MENU =
             Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "processor_menu"),
                     new ExtendedMenuType<>(ProcessorMenu::new, BlockPos.STREAM_CODEC));
+    public static final MenuType<BuilderMenu> BUILDER_MENU =
+            Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "builder_menu"),
+                    new ExtendedMenuType<>(BuilderMenu::new, BlockPos.STREAM_CODEC));
 
     public static final MenuType<ATMMenu> ATM_MENU =
             Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(PaulsMod.MOD_ID, "atm_menu"),

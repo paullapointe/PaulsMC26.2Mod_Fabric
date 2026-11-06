@@ -16,6 +16,7 @@ import net.lapointep.paulsmod.effect.ModEffects;
 import net.lapointep.paulsmod.enchantments.ModEnchantmentEffects;
 import net.lapointep.paulsmod.entity.ModEntities;
 import net.lapointep.paulsmod.event.ChatEventListener;
+import net.lapointep.paulsmod.event.PlayerDeathEventListener;
 import net.lapointep.paulsmod.item.ModItems;
 import net.lapointep.paulsmod.menu.ModMenuTypes;
 import net.lapointep.paulsmod.network.ModMessages;
@@ -76,6 +77,7 @@ public class PaulsMod implements ModInitializer {
 		ModMessages.registerServerHandlers();
         ModPotionRecipes.registerPotionRecipes();
         ChatEventListener.register();
+        PlayerDeathEventListener.register();
 
 		ServerLifecycleEvents.SERVER_STARTING.register(this::onServerStarting);
 		ServerLifecycleEvents.SERVER_STOPPED.register(this::onServerStopped);

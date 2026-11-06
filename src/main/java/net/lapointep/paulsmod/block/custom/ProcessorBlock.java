@@ -21,7 +21,6 @@ import static net.lapointep.paulsmod.block.entity.ModBlockEntities.MIXER;
 
 public class ProcessorBlock extends BaseEntityBlock {
     public static final MapCodec<ProcessorBlock> CODEC = simpleCodec(ProcessorBlock::new);
-    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
 
     public enum ProcessorType {
         LAVA_CORE,
@@ -38,27 +37,10 @@ public class ProcessorBlock extends BaseEntityBlock {
 
     public ProcessorBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, Boolean.FALSE));
     }
 
     public ProcessorBlock(Properties properties, ProcessorType type) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, Boolean.FALSE));
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(POWERED);
-    }
-
-    @Override
-    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, @Nullable net.minecraft.world.level.redstone.Orientation orientation, boolean notify) {
-        if (!level.isClientSide()) {
-            boolean isPowered = level.hasNeighborSignal(pos);
-            if (state.getValue(POWERED) != isPowered) {
-                level.setBlock(pos, state.setValue(POWERED, isPowered), 3);
-            }
-        }
     }
 
     @Override

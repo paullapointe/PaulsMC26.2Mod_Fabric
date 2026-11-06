@@ -132,12 +132,14 @@
   "block.paulsmod.lattice_arch": "Lattice Arch",
   "block.paulsmod.storeshelf": "Store Shelf",
   "block.paulsmod.displayshelf": "Shelf",
+  "block.paulsmod.builder": "Builder",
   "block.paulsmod.camo_block": "",
   "block.paulsmod.river_rock_mortar": "River Rock and Mortar",
   "block.paulsmod.river_rock": "River Rock",
   "item.paulsmod.river_rocks": "River Rock",
 
   "item.paulsmod.camo_block": "Camouflauge",
+  "item.paulsmod.builder": "Builder",
   "item.paulsmod.stickynote": "Sticky Note",
   "item.paulsmod.clay_plate": "Unfired Clay Plate",
 
@@ -190,6 +192,7 @@
   "container.paulsmod.sorter": "Sorter",
   "container.paulsmod.census": "Census",
   "container.paulsmod.hearth": "Hearth",
+  "container.paulsmod.builder": "Builder",
 
   "creativemodetab.paulsmod.pauls_mods_potions": "Pauls Potions",
   "creativemodetab.paulsmod.pauls_mods_items": "Pauls Items",

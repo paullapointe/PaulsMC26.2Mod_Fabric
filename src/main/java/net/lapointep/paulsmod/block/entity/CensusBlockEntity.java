@@ -19,19 +19,21 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.AABB;
+import java.util.ArrayList;
 import java.util.HashMap;
-
-import static net.lapointep.paulsmod.block.custom.CensusBlock.MAX_STATE;
+import java.util.List;
 import static net.lapointep.paulsmod.util.PaulsCommon.trackPlayers;
 
-public class CensusBlockEntity extends BlockEntity implements BlockWithCyclableState {
+public class CensusBlockEntity extends BlockEntity {
     private String areaName = "";
+    private List<Integer> knownMapIds = new ArrayList<>();
+    private boolean isFirstTick = true;
     final int MAX_COUNTER = 20*2;
     final BETicker ticker = new BETicker(MAX_COUNTER);
     final BETicker ticker2 = new BETicker(60);
     AABB range;
 
-    public static final int RANGE = 20;
+    public static final int RANGE = 32;
     public static final int FREE_BEDS = 1;
     HashMap<ServerPlayer, GameType> playersInRange = new HashMap<>();
 
@@ -48,10 +50,13 @@ public class CensusBlockEntity extends BlockEntity implements BlockWithCyclableS
     }
 
     public void tick(Level level, BlockPos pos, BlockState state) {
+        if (isFirstTick) {
+            isFirstTick = false;
+            updateMapsOnFirstTick(level, pos);
+        }
         if (ticker.notReadyToRun()) { return; }
 
-        //PaulsMod.LOGGER.info("Census Ticking {} {}", pos, state.getValue(CensusBlock.STATE));
-        cycleState(level, pos, state);
+        //PaulsMod.LOGGER.info("Census Ticking {} {}", pos, state);
         String hello = "You have entered "+areaName+".";
         String goodbye = "You have left "+areaName+".";
         trackPlayers(level, playersInRange, range, false, areaName, hello, goodbye);
@@ -69,32 +74,82 @@ public class CensusBlockEntity extends BlockEntity implements BlockWithCyclableS
         }
     }
 
-
-    public void cycleState(Level level, BlockPos pos, BlockState state) {
-        int currentState = state.getValue(CensusBlock.STATE);
-        int newState = (currentState + 1) % (MAX_STATE);
-        //PaulsMod.LOGGER.info("Cycle State {} {}", pos, newState);
-        level.setBlock(pos, state.setValue(CensusBlock.STATE, newState), 3);
-    }
-
     public void setAreaName(String name) {
         this.areaName = name;
         this.setChanged();
+        updateMarkersOnKnownMaps();
+    }
+
+    private void updateMapsOnFirstTick(Level level, BlockPos pos) {
+        if (level.getBlockState(pos).getBlock() instanceof CensusBlock censusBlock) {
+            for (int mapIdInt : knownMapIds) {
+                net.minecraft.world.level.saveddata.maps.MapId mapId = new net.minecraft.world.level.saveddata.maps.MapId(mapIdInt);
+                censusBlock.addTextMarkerToMap(level, pos, mapId, this.areaName, null);
+            }
+        }
+    }
+
+    private void updateMarkersOnKnownMaps() {
+        if (this.level == null || this.level.isClientSide()) {
+            return;
+        }
+
+        for (int mapIdInt : knownMapIds) {
+            net.minecraft.world.level.saveddata.maps.MapId mapId = new net.minecraft.world.level.saveddata.maps.MapId(mapIdInt);
+            net.minecraft.world.level.saveddata.maps.MapItemSavedData mapData = net.minecraft.world.item.MapItem.getSavedData(mapId, this.level);
+            if (mapData != null) {
+                String decorationKey = "census_marker_" + this.worldPosition.getX() + "_" + this.worldPosition.getZ();
+                net.minecraft.world.level.saveddata.maps.MapDecoration existing = mapData.decorations.get(decorationKey);
+                if (existing != null) {
+                    net.minecraft.world.level.saveddata.maps.MapDecoration newDecoration = new net.minecraft.world.level.saveddata.maps.MapDecoration(
+                            existing.type(),
+                            existing.x(),
+                            existing.y(),
+                            existing.rot(),
+                            java.util.Optional.of(net.minecraft.network.chat.Component.literal(this.areaName))
+                    );
+                    mapData.decorations.put(decorationKey, newDecoration);
+                    mapData.setDirty();
+                }
+            }
+        }
     }
 
     public String getAreaName() {
         return areaName;
     }
 
+    public void addKnownMap(int mapId) {
+        if (!knownMapIds.contains(mapId)) {
+            knownMapIds.add(mapId);
+            this.setChanged();
+        }
+    }
+
+    public List<Integer> getKnownMapIds() {
+        return knownMapIds;
+    }
+
     @Override
     protected void saveAdditional(ValueOutput output) {
         super.saveAdditional(output);
         output.putString("areaName", areaName);
+        output.putInt("knownMapCount", knownMapIds.size());
+        for (int i = 0; i < knownMapIds.size(); i++) {
+            output.putInt("mapId_" + i, knownMapIds.get(i));
+        }
     }
 
     @Override
     protected void loadAdditional(ValueInput input) {
         super.loadAdditional(input);
         this.areaName = input.getStringOr("areaName", "");
+        int count = input.getIntOr("knownMapCount", 0);
+        knownMapIds.clear();
+        for (int i = 0; i < count; i++) {
+            knownMapIds.add(input.getIntOr("mapId_" + i, 0));
+        }
     }
+
+
 }

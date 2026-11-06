@@ -272,24 +272,11 @@ public class ProcessorBlockEntity extends BlockEntity implements WorldlyContaine
     }
 
     public boolean isCrafting() {
-        /*
-        ItemStack inputStack = this.getItem(INPUT_SLOT);
-        if (inputStack.isEmpty()) {
-            return false;
-        }
-
-        if (inputStack.getItem() == Items.BUCKET) {
-            this.increaseCraftingProgress();
-        }
-*/
-        // TODO: Add more checks here
-        //PaulsMod.LOGGER.info("Generic isCrafting");
         return false;
     }
 
-    public ItemStack getOutputItem() {
-        return this.outputItemStack;
-    }
+    public ItemStack getOutputItem() { return this.outputItemStack; }
+
     public void setOutputItem(Item outputItem) {
         this.outputItemStack = new ItemStack(outputItem);
     }

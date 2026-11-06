@@ -111,6 +111,7 @@ public class ModBlocks {
     public static final Block STORESHELF = registerBlock("storeshelf", properties -> new StoreShelfBlock(properties.strength(4f).noOcclusion()));
     public static final Block DISPLAYSHELF = registerBlock("displayshelf", properties -> new DisplayShelfBlock(properties.strength(4f).noOcclusion()));
     public static final Block CAMO = registerBlock("camo", properties -> new CamoBlock(properties.strength(4f).noOcclusion()));
+    public static final Block BUILDER = registerBlock("builder", properties -> new BuilderBlock(properties.strength(4f).noOcclusion()));
     public static final Block PRESENT = registerBlock("present", properties -> new PresentBlock(properties.strength(1f).noOcclusion()), false);
 
     public static final Block LOCKING_DOOR = registerBlock("locking_door",properties -> new LockingDoorBlock(BlockSetType.OAK, properties.strength(3f).requiresCorrectToolForDrops().noOcclusion()));

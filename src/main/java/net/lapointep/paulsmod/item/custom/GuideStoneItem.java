@@ -67,7 +67,7 @@ public class GuideStoneItem extends Item {
         } else {
             if (level instanceof ServerLevel serverLevel) {
                 if (player instanceof ServerPlayer serverPlayer) {
-                    showTheWay(serverLevel, serverPlayer, stack);
+//                    showTheWay(serverLevel, serverPlayer, stack);
                     //player.getCooldowns().addCooldown(this, 20); // 1 sec cooldown
                 }
             }

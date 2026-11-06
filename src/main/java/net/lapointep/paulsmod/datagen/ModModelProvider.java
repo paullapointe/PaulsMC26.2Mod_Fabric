@@ -26,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.STORESHELF);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.DISPLAYSHELF);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.SEEING_POOL);
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CENSUS);
         //blockModelGenerators.createNonTemplateModelBlock(ModBlocks.HOOK);
         blockModelGenerators.createTrivialCube(ModBlocks.SPAWNER);
 
