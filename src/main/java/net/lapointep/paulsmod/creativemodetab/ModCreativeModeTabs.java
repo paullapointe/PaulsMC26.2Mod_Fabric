@@ -69,7 +69,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PLATE);
                         output.accept(ModItems.CLAY_PLATE);
                         output.accept(ModBlocks.HOOK);
-                        output.accept(ModBlocks.ALTER);
+                        output.accept(ModBlocks.ALTAR);
                         output.accept(ModBlocks.SPAWNER);
                         output.accept(ModBlocks.LOCKING_DOOR);
 

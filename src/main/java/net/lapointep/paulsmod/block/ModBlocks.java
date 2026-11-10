@@ -10,7 +10,6 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -96,7 +95,8 @@ public class ModBlocks {
     public static final Block PLATE = registerBlock("plate",properties -> new PlateBlock(properties.strength(4f).noOcclusion()));
     public static final Block SPAWNER = registerBlock("spawner",properties -> new SpawnerBlock(properties.strength(4f).noOcclusion()));
     public static final Block HOOK = registerBlock("hook",properties -> new HookBlock(properties.strength(4f).noOcclusion()));
-    public static final Block ALTER = registerBlock("alter",properties -> new AlterBlock(properties.strength(4f).noOcclusion()));
+    public static final Block ALTAR = registerBlock("alter", properties -> new AltarBlock(properties.strength(4f).noOcclusion()));
+    public static final Block EXTRACTOR = registerBlock("extractor",properties -> new ExtractorBlock(properties.strength(4f).noOcclusion()));
     public static final Block SEEING_POOL = registerBlock("seeing_pool",properties -> new SeeingPoolBlock(properties.strength(8f).noOcclusion()));
 
     public static final Block STAIN_GLASS = registerBlock("stain_glass", properties -> new StainGlassBlock(properties.strength(4f).noOcclusion()));

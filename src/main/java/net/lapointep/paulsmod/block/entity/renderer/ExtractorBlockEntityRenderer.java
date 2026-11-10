@@ -2,7 +2,7 @@ package net.lapointep.paulsmod.block.entity.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.lapointep.paulsmod.block.entity.AltarBlockEntity;
+import net.lapointep.paulsmod.block.entity.ExtractorBlockEntity;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -14,20 +14,20 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-public class AlterBlockEntityRenderer implements BlockEntityRenderer<AltarBlockEntity, AlterBlockEntityRenderState> {
+public class ExtractorBlockEntityRenderer implements BlockEntityRenderer<ExtractorBlockEntity, ExtractorBlockEntityRenderState> {
     private final ItemModelResolver itemModelResolver;
 
-    public AlterBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
+    public ExtractorBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
         itemModelResolver = context.itemModelResolver();
     }
 
     @Override
-    public AlterBlockEntityRenderState createRenderState() {
-        return new AlterBlockEntityRenderState();
+    public ExtractorBlockEntityRenderState createRenderState() {
+        return new ExtractorBlockEntityRenderState();
     }
 
     @Override
-    public void extractRenderState(AltarBlockEntity blockEntity, AlterBlockEntityRenderState state,
+    public void extractRenderState(ExtractorBlockEntity blockEntity, ExtractorBlockEntityRenderState state,
                                    float partialTicks, Vec3 cameraPosition, ModelFeatureRenderer.@Nullable CrumblingOverlay breakProgress) {
         BlockEntityRenderer.super.extractRenderState(blockEntity, state, partialTicks, cameraPosition, breakProgress);
 
@@ -39,7 +39,7 @@ public class AlterBlockEntityRenderer implements BlockEntityRenderer<AltarBlockE
     }
 
     @Override
-    public void submit(AlterBlockEntityRenderState state, PoseStack poseStack,
+    public void submit(ExtractorBlockEntityRenderState state, PoseStack poseStack,
                        SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
         poseStack.pushPose();
 

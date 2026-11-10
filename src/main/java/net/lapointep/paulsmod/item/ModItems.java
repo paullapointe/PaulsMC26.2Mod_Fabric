@@ -78,12 +78,12 @@ public class ModItems {
     public static final Item WAFFLE_MIX = registerItem("waffle_mix", Item::new);
 
     public static final Item TELEPORTER_ARROW = registerItem("teleporter_arrow",properties -> new TeleporterArrowItem(properties));
-    public static final Item TRAVELING_STONE = registerItem("traveling_stone",properties -> new TravelingStoneItem(properties.durability(80)));
+    public static final Item TRAVELING_STONE = registerItem("traveling_stone", TravelingStoneItem::new);
 
-    public static final Item GUIDE_STONE = registerItem("guide_stone",properties -> new GuideStoneItem(properties.durability(80)));
+    public static final Item GUIDE_STONE = registerItem("guide_stone",GuideStoneItem::new);
     public static final Item SORTING_WAND = registerItem("sorting_wand",SortingWandItem::new);
 
-    public static final Item FLORIN = registerItem("florin", properties -> new FlorinItem(properties));
+    public static final Item FLORIN = registerItem("florin", FlorinItem::new);
     public static final Item WRAPPING_PAPER = registerItem("wrapping_paper", properties -> new WrappingPaperItem(properties));
     public static final Item PRESENT = registerItem("present", properties -> new PresentItem(ModBlocks.PRESENT, properties.stacksTo(1)));
     public static final Item WAFFLES = registerItem("waffles",Item::new);

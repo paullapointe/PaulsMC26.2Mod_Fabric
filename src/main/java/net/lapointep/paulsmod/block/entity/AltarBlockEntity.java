@@ -1,7 +1,7 @@
 package net.lapointep.paulsmod.block.entity;
 
 
-import net.lapointep.paulsmod.block.custom.AlterBlock;
+import net.lapointep.paulsmod.block.custom.AltarBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
@@ -32,7 +32,7 @@ public class AltarBlockEntity extends BlockEntity implements ContainerSingleItem
     BETicker ticker = new BETicker(MAX_COUNT);
 
     public AltarBlockEntity(BlockPos worldPosition, BlockState blockState) {
-        super(ModBlockEntities.ALTER, worldPosition, blockState);
+        super(ModBlockEntities.ALTAR, worldPosition, blockState);
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, AltarBlockEntity blockEntity) {
@@ -44,7 +44,7 @@ public class AltarBlockEntity extends BlockEntity implements ContainerSingleItem
 
     public void tick(Level level, BlockPos pos, BlockState state) {
         if (ticker.notReadyToRun()) { return; }
-        //PaulsMod.LOGGER.info("Alter Ticking {} {}", pos, state.getValue(AlterBlock.STATE));
+        //PaulsMod.LOGGER.info("Alter Ticking {} {}", pos, state.getValue(AltarBlock.STATE));
         if (energy == 0) {
             setState(0);
         }
@@ -82,7 +82,7 @@ public class AltarBlockEntity extends BlockEntity implements ContainerSingleItem
         if (energy > 0) {
             setState(1);
         }
-        //PaulsMod.LOGGER.info("Energy: {} State: {}", energy, state.getValue(AlterBlock.STATE));
+        //PaulsMod.LOGGER.info("Energy: {} State: {}", energy, state.getValue(AltarBlock.STATE));
     }
 
     public int getEnergy(int wantedEnergy) {
@@ -148,7 +148,7 @@ public class AltarBlockEntity extends BlockEntity implements ContainerSingleItem
     public void setState(int state) {
         this.state = state;
         BlockState blockState = this.getBlockState();
-        level.setBlock(this.worldPosition, blockState.setValue(AlterBlock.STATE, state), 3);
+        level.setBlock(this.worldPosition, blockState.setValue(AltarBlock.STATE, state), 3);
         this.setChanged();
     }
 

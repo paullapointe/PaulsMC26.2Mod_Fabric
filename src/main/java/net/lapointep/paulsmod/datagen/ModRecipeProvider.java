@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.lapointep.paulsmod.block.ModBlocks;
 import net.lapointep.paulsmod.item.ModItems;
-import net.lapointep.paulsmod.potions.ModPotions;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -12,19 +11,13 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potion;
-import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.SmeltingRecipe;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -256,7 +249,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Blocks.POLISHED_DIORITE), has(Blocks.POLISHED_DIORITE))
                         .group("tools").save(output);
 
-                shapeless(RecipeCategory.MISC, ModBlocks.ALTER, 1)
+                shapeless(RecipeCategory.MISC, ModBlocks.ALTAR, 1)
                         .requires(ModBlocks.PEDESTAL,1)
                         .requires(Items.GOLD_INGOT,1)
                         .unlockedBy(getHasName(ModBlocks.PEDESTAL), has(ModBlocks.PEDESTAL))

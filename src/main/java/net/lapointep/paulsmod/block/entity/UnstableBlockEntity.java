@@ -1,5 +1,6 @@
 package net.lapointep.paulsmod.block.entity;
 
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.lapointep.paulsmod.block.BlockWithCyclableState;
 import net.lapointep.paulsmod.block.ModBlocks;
 import net.lapointep.paulsmod.block.custom.UnstableBlock;
@@ -7,6 +8,7 @@ import net.lapointep.paulsmod.util.PaulsCommon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
@@ -138,7 +140,7 @@ public class UnstableBlockEntity extends BlockEntity implements BlockWithCyclabl
                     }
                 }
             }
-            else if (blockType == ModBlockEntities.UNSTABLEDIRT) {
+            else if ((blockType == ModBlockEntities.UNSTABLEDIRT) || neighborState.is(Blocks.GRASS_BLOCK)){
                 if (neighborState.is(Blocks.DIRT)) {
                     level.setBlock(neighborPos, ModBlocks.UNSTABLEDIRT.defaultBlockState(), 3);
                     BlockEntity neighborBlockEntity = level.getBlockEntity(neighborPos);
@@ -146,8 +148,29 @@ public class UnstableBlockEntity extends BlockEntity implements BlockWithCyclabl
                         unstableBlockEntity.setSpread(spread+1);
                     }
                 }
+                else if (isWoodOrWooden(neighborState)) {
+                    level.setBlock(neighborPos, Blocks.FIRE.defaultBlockState(), 3);
+                }
             }
         }
+    }
+
+    public boolean isWoodOrWooden(BlockState state) {
+        return state.is(BlockTags.PLANKS) ||
+                state.is(BlockTags.LOGS) ||
+                state.is(BlockTags.WOODEN_BUTTONS) ||
+                state.is(BlockTags.WOODEN_DOORS) ||
+                state.is(BlockTags.WOODEN_FENCES) ||
+                state.is(BlockTags.WOODEN_STAIRS) ||
+                state.is(BlockTags.WOODEN_SLABS);
+        // Add other wooden tag categories as needed (e.g., TRAPDOORS, PRESSURE_PLATES)
+    }
+    public boolean isBlockFlammable(BlockState state) {
+        // Check if the registry contains an entry for the block state/block
+        FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
+
+        // You can query via the block itself
+        return registry.get(state.getBlock()) != null;
     }
 
     public void addDrama(BlockPos pos, Level level, ServerLevel serverLevel, RandomSource random) {

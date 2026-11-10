@@ -46,7 +46,7 @@ public class HealingBlockEntity extends BlockEntity {
 
         if (alterFindTicker.notReadyToRun()) { return; }
       //  PaulsMod.LOGGER.info("Alter Finding");
-        alterPos =  PaulsCommon.findFirstBlock(level, pos, ModBlocks.ALTER, RANGE);
+        alterPos =  PaulsCommon.findFirstBlock(level, pos, ModBlocks.ALTAR, RANGE);
         //PaulsMod.LOGGER.info("Alter Pos: " + alterPos);
     }
 

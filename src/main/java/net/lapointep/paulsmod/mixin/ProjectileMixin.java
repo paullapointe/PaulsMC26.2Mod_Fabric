@@ -76,7 +76,7 @@ public abstract class ProjectileMixin {
                     }
                 }
                 else if (contents.is(ModPotions.DIRT_POTION)) {
-                    if (blockState.is(Blocks.DIRT) || blockState.is(Blocks.COARSE_DIRT)) {
+                    if (blockState.is(Blocks.DIRT) || blockState.is(Blocks.COARSE_DIRT) || blockState.is(Blocks.GRASS_BLOCK)) {
                         level.setBlockAndUpdate(hitPos, ModBlocks.UNSTABLEDIRT.defaultBlockState());
                     }
                 }

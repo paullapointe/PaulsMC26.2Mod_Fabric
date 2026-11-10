@@ -202,6 +202,7 @@
 
   "item.paulsmod.osc" : "Oscillator",
   "item.paulsmod.receiver": "Receiver",
+  "block.paulsmod.receiver": "Receiver",
   "item.paulsmod.spawner": "Spawner",
   "item.paulsmod.fueler": "Fueler",
 

@@ -11,7 +11,6 @@ import net.lapointep.paulsmod.entity.ModEntities;
 import net.lapointep.paulsmod.entity.TeleporterArrowEntity;
 import net.lapointep.paulsmod.network.ModMessages;
 import net.minecraft.client.KeyMapping;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.ArrowRenderer;
@@ -53,7 +52,8 @@ public class PaulsModClient implements ClientModInitializer {
         BlockEntityRenderers.register(ModBlockEntities.PLATE, PlateBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.SPAWNER, SpawnerBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.HOOK, HookBlockEntityRenderer::new);
-        BlockEntityRenderers.register(ModBlockEntities.ALTER, AlterBlockEntityRenderer::new);
+        BlockEntityRenderers.register(ModBlockEntities.ALTAR, AltarBlockEntityRenderer::new);
+        BlockEntityRenderers.register(ModBlockEntities.EXTRACTOR, ExtractorBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.LAVA_CORE, ProcessorBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.MIXER, ProcessorBlockEntityRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.STICKYNOTE, StickyNoteBlockEntityRenderer::new);

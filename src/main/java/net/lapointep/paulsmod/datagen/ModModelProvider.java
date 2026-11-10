@@ -21,7 +21,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.SORTER);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.PEDESTAL);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.PLATE);
-        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.ALTER);
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.ALTAR);
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.EXTRACTOR);
         // BREWER blockstate is manually defined in resources/assets/paulsmod/blockstates/brewer.json
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.STORESHELF);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.DISPLAYSHELF);

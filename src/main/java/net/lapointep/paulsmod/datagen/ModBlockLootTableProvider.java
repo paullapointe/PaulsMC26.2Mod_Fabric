@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.lapointep.paulsmod.block.ModBlocks;
 import net.lapointep.paulsmod.item.ModItems;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -32,7 +31,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.LIFEPRESERVER);
         dropSelf(ModBlocks.CLOCK);
         dropSelf(ModBlocks.ENDERLAMP);
-        dropSelf(ModBlocks.HEALING);
         dropSelf(ModBlocks.BARRIER);
         dropSelf(ModBlocks.CENSUS);
         dropSelf(ModBlocks.ENDERLAMP);
@@ -43,7 +41,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.PLATE);
         dropSelf(ModBlocks.HOOK);
         dropSelf(ModBlocks.SPAWNER);
-        dropSelf(ModBlocks.ALTER);
+        dropSelf(ModBlocks.ALTAR);
         dropSelf(ModBlocks.LAVA_CORE);
         dropSelf(ModBlocks.BRICKMAKER);
         dropSelf(ModBlocks.MIXER);
@@ -55,6 +53,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.DISPLAYSHELF);
         dropSelf(ModBlocks.CAMO);
         dropSelf(ModBlocks.BUILDER);
+        dropSelf(ModBlocks.EXTRACTOR);
 
         add(ModBlocks.RIVER_ROCK, createOreDrop(ModBlocks.RIVER_ROCK, ModItems.RIVER_ROCKS));
         dropSelf(ModBlocks.RIVER_ROCK_MORTAR);

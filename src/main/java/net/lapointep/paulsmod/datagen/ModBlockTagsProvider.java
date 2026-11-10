@@ -4,10 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.lapointep.paulsmod.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.tags.BlockItemTagAppender;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -45,7 +42,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.PEDESTAL.builtInRegistryHolder().key())
                 .add(ModBlocks.PLATE.builtInRegistryHolder().key())
                 .add(ModBlocks.HOOK.builtInRegistryHolder().key())
-                .add(ModBlocks.ALTER.builtInRegistryHolder().key())
+                .add(ModBlocks.ALTAR.builtInRegistryHolder().key())
                 .add(ModBlocks.RIVER_ROCK.builtInRegistryHolder().key())
                 .add(ModBlocks.RIVER_ROCK_MORTAR.builtInRegistryHolder().key())
                 .add(ModBlocks.LOCKING_DOOR.builtInRegistryHolder().key())
