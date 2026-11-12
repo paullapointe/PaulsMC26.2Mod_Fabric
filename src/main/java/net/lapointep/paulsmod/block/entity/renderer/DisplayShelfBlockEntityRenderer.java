@@ -1,6 +1,7 @@
 package net.lapointep.paulsmod.block.entity.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import net.lapointep.paulsmod.block.custom.DisplayShelfBlock;
 import net.lapointep.paulsmod.block.entity.DisplayShelfBlockEntity;
 import net.lapointep.paulsmod.util.PaulsCommon;
@@ -38,6 +39,7 @@ public class DisplayShelfBlockEntityRenderer implements BlockEntityRenderer<Disp
         BlockEntityRenderer.super.extractRenderState(blockEntity, state, partialTicks, cameraPosition, breakProgress);
 
         state.level = blockEntity.getLevel();
+        state.facing = blockEntity.getBlockState().getValue(DisplayShelfBlock.FACING);
         for (int i = 0; i < 6; i++) {
             itemModelResolver.updateForTopItem(state.itemStackRenderState[i],
                     blockEntity.getItem(i), ItemDisplayContext.FIXED,
@@ -49,6 +51,12 @@ public class DisplayShelfBlockEntityRenderer implements BlockEntityRenderer<Disp
     @Override
     public void submit(DisplayShelfBlockEntityRenderState state, PoseStack poseStack,
                        SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
+        poseStack.pushPose();
+        poseStack.translate(0.5f, 0.5f, 0.5f);
+        float rotation = state.facing.toYRot();
+        poseStack.mulPose(Axis.YP.rotationDegrees(-rotation));
+        poseStack.translate(-0.5f, -0.5f, -0.5f);
+
         float scale = 0.3f;
         displayItem(0, state, poseStack, submitNodeCollector, camera, 0.25f, 0.75f, 0.5f, scale);
         displayItem(1, state, poseStack, submitNodeCollector, camera, 0.5f,  0.75f, 0.5f, scale);
@@ -56,6 +64,8 @@ public class DisplayShelfBlockEntityRenderer implements BlockEntityRenderer<Disp
         displayItem(3, state, poseStack, submitNodeCollector, camera, 0.25f, 0.25f, 0.5f, scale);
         displayItem(4, state, poseStack, submitNodeCollector, camera, 0.5f,  0.25f, 0.5f, scale);
         displayItem(5, state, poseStack, submitNodeCollector, camera, 0.75f, 0.25f, 0.5f, scale);
+
+        poseStack.popPose();
     }
 
 

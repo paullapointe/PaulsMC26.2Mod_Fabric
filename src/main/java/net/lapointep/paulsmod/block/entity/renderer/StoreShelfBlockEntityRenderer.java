@@ -1,6 +1,8 @@
 package net.lapointep.paulsmod.block.entity.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
+import net.lapointep.paulsmod.block.custom.DisplayShelfBlock;
 import net.lapointep.paulsmod.block.custom.StoreShelfBlock;
 import net.lapointep.paulsmod.block.entity.StoreShelfBlockEntity;
 import net.lapointep.paulsmod.util.PaulsCommon;
@@ -38,6 +40,7 @@ public class StoreShelfBlockEntityRenderer implements BlockEntityRenderer<StoreS
         BlockEntityRenderer.super.extractRenderState(blockEntity, state, partialTicks, cameraPosition, breakProgress);
 
         state.level = blockEntity.getLevel();
+        state.facing = blockEntity.getBlockState().getValue(StoreShelfBlock.FACING);
         state.cost = blockEntity.getBlockState().getValue(StoreShelfBlock.COST);
         for (int i = 0; i < 6; i++) {
             itemModelResolver.updateForTopItem(state.itemStackRenderState[i],
@@ -52,6 +55,13 @@ public class StoreShelfBlockEntityRenderer implements BlockEntityRenderer<StoreS
     @Override
     public void submit(StoreShelfBlockEntityRenderState state, PoseStack poseStack,
                        SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
+
+        poseStack.pushPose();
+        poseStack.translate(0.5f, 0.5f, 0.5f);
+        float rotation = state.facing.toYRot();
+        poseStack.mulPose(Axis.YP.rotationDegrees(-rotation));
+        poseStack.translate(-0.5f, -0.5f, -0.5f);
+
         float scale = 0.3f;
         displayItem(0, state, poseStack, submitNodeCollector, camera, 0.25f, 0.75f, 0.5f, scale);
         displayItem(1, state, poseStack, submitNodeCollector, camera, 0.5f,  0.75f, 0.5f, scale);
@@ -59,7 +69,8 @@ public class StoreShelfBlockEntityRenderer implements BlockEntityRenderer<StoreS
         displayItem(3, state, poseStack, submitNodeCollector, camera, 0.25f, 0.25f, 0.5f, scale);
         displayItem(4, state, poseStack, submitNodeCollector, camera, 0.5f,  0.25f, 0.5f, scale);
         displayItem(5, state, poseStack, submitNodeCollector, camera, 0.75f, 0.25f, 0.5f, scale);
-
+        poseStack.popPose();
+        
         poseStack.pushPose();
         int color = 0xFF00FF00;
         scale = 0.05f;

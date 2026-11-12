@@ -45,7 +45,7 @@ public class RecieverBlockItem extends BlockItem {
         nbt.putString("dim", level.dimension().identifier().toString());
         stack.set(DataComponents.CUSTOM_DATA, CustomData.of(nbt));
 
-        player.sendSystemMessage(Component.translatable("item.paulsmod.reciever.destination_set",
-                pos.getX(), pos.getY(), pos.getZ(), level.dimension().identifier().toString()));
+        player.sendSystemMessage(Component.translatable("item.paulsmod.receiver.destination_set",
+                pos.getX(), pos.getY(), pos.getZ()));
     }
 }

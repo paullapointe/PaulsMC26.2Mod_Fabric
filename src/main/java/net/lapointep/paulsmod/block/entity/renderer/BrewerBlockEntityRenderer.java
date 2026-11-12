@@ -45,6 +45,12 @@ public class BrewerBlockEntityRenderer implements BlockEntityRenderer<BrewerBloc
     @Override
     public void submit(BrewerBlockEntityRenderState state, PoseStack poseStack,
                        SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
+        poseStack.pushPose();
+        poseStack.translate(0.5f, 0.5f, 0.5f);
+        float rotation = state.facing.toYRot();
+        poseStack.mulPose(Axis.YP.rotationDegrees(-rotation));
+        poseStack.translate(-0.5f, -0.5f, -0.5f);
+
         float scale = 0.3f;
         displayItem(0, state, poseStack, submitNodeCollector, camera, 0.25f, 0.75f, 0.5f, scale);
         displayItem(1, state, poseStack, submitNodeCollector, camera, 0.5f,  0.75f, 0.5f, scale);
@@ -52,7 +58,7 @@ public class BrewerBlockEntityRenderer implements BlockEntityRenderer<BrewerBloc
         displayItem(3, state, poseStack, submitNodeCollector, camera, 0.25f, 0.25f, 0.5f, scale);
         displayItem(4, state, poseStack, submitNodeCollector, camera, 0.5f,  0.25f, 0.5f, scale);
         displayItem(5, state, poseStack, submitNodeCollector, camera, 0.75f, 0.25f, 0.5f, scale);
-
+        poseStack.popPose();
     }
 
     public void displayItem(int i, BrewerBlockEntityRenderState state, PoseStack poseStack,

@@ -201,11 +201,12 @@
   "creativemodetab.paulsmod.pauls_mods_magic": "Pauls Magic",
 
   "item.paulsmod.osc" : "Oscillator",
-  "item.paulsmod.receiver": "Receiver",
-  "block.paulsmod.receiver": "Receiver",
+  "item.paulsmod.reciever": "Receiver",
+  "item.paulsmod.receiver.destination_set": "Receiver target set to %s, %s, %s",
   "item.paulsmod.spawner": "Spawner",
   "item.paulsmod.fueler": "Fueler",
-
+  "item.paulsmod.helper": "Helper",
+  
   "item.minecraft.splash_potion.effect.sugar_water": "Sugar Water",
   "item.minecraft.splash_potion.effect.netherrack_potion": "Netherrack Potion",
   "item.minecraft.splash_potion.effect.lava_potion": "Lava Potion",

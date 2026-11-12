@@ -7,6 +7,7 @@ import net.minecraft.world.level.Level;
 
 public class DisplayShelfBlockEntityRenderState extends BlockEntityRenderState {
     public Level level;
+    public Direction facing;
     final ItemStackRenderState[] itemStackRenderState = new ItemStackRenderState[6];
     DisplayShelfBlockEntityRenderState() {
         for (int i = 0; i < 6; i++) {
